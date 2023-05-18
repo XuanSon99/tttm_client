@@ -78,7 +78,7 @@
 <script setup>
 import moment from "moment";
 
-const api_url = 'https://chootc.com/api'
+const api_url = 'https://api.chootc.com/api'
 const { id } = useRoute().params
 
 const { data: info } = await useFetch(`${api_url}/posts/${id}`)
@@ -117,10 +117,10 @@ useHead({
     { hid: 'og:description', property: 'og:description', content: info.value.meta_description },
     { name: 'keywords', content: keywords },
     { name: 'news_keywords', content: keywords },
-    { hid: 'og:image', property: 'og:image', content: `https://chootc.com/storage${info.value.image}` },
+    { hid: 'og:image', property: 'og:image', content: `https://api.chootc.com/storage${info.value.image}` },
     { name: 'twitter:title', content: info.value.title },
     { name: 'twitter:description', property: 'og:description', content: info.value.meta_description },
-    { name: 'twitter:image', content: `https://chootc.com/storage${info.value.image}` },
+    { name: 'twitter:image', content: `https://api.chootc.com/storage${info.value.image}` },
     { name: 'twitter:url', content: `https://chootc.com/${info.value.slug}` },
   ],
   link: [
