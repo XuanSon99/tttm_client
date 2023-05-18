@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
         categories: ['crypto', 'otc', 'usdt', 'btc', 'eth', 'bitcoin', 'tiền điện tử','chứng khoán', 'giá vàng', 'tỷ giá', 'ngoại tệ'],
     })
 
-    const list = (await axios.get(`https://chootc.com/api/posts`)).data.data;
+    const list = (await axios.get(`https://api.chootc.com/api/posts`)).data.data;
 
     for (const item of list) {
         feed.item({
