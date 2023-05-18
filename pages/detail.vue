@@ -18,7 +18,7 @@
               </span>
             </p>
             <div class="details">
-              <div v-html="info.body"></div>
+              <div v-html="configBody(info.created_at, info.body)"></div>
             </div>
           </div>
           <div class="details loader" v-else></div>
@@ -105,6 +105,14 @@ const formatTime = (date) => {
 const toDetail = (slug) => {
   const router = useRouter();
   router.push("/" + slug);
+}
+
+const configBody = (date, body) => {
+  const time = new Date(date).getTime()
+  if (time < 1684400071000) {
+    return body.replaceAll('https://chootc.com', 'https://api.chootc.com')
+  }
+  return body
 }
 
 const default_keywords = 'mua bán usdt, bitcoin, btc, eth, otc, crypto, tỷ giá, ngoại tệ, giá vàng, chứng khoán'
