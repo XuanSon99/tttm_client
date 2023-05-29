@@ -26,7 +26,7 @@
         <div class="feature" v-if="post_list.data[0]">
           <h1>Bài viết mới nhất</h1>
           <div class="space" v-for="(item, index) in post_list.data" :key="index">
-            <img :src="$image(item.image)" alt="" />
+            <nuxt-img format="webp" :src="$image(item.image)" alt="" />
             <div class="title">
               <h3 @click="toDetail(item.slug)">{{ formatTitle(item.title) }}</h3>
               <p class="space">
@@ -50,7 +50,7 @@
         <div class="mowgrid">
           <div class="item" v-for="(item, index) in related_list.data" :key="index">
             <div class="image">
-              <img :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" />
+              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" />
             </div>
             <div class="content">
               <h2 @click="toDetail(item.slug)">{{ item.title }}</h2>

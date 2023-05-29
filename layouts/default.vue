@@ -22,7 +22,7 @@ export default {
 }
 
 .v-theme--dark.v-application {
-    background: #000211;
+    background: #010313;
 }
 
 .text-primary {

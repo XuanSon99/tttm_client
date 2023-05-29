@@ -133,7 +133,7 @@ header .menu {
     justify-content: center;
 }
 
-#menu {
+#menu-bar {
     background: #12ebe0;
 }
 
@@ -1236,6 +1236,11 @@ input.exchange-input:hover {
 }
 
 .banner img {
+    height: 450px;
+    width: 600px;
+    object-fit: cover;
+}
+.banner video{
     height: 450px;
     width: 600px;
     object-fit: cover;

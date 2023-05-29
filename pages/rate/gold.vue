@@ -78,14 +78,14 @@
           <div class="mowtit">
             <span>Tin tức thị trường</span>
           </div>
-          <v-btn icon color="primary" size="35" variant="text" to="/danh-muc/tin-tuc-thi-truong">
+          <v-btn icon color="primary" size="35" variant="text" to="/danh-muc/tin-tuc-thi-truong" aria-label="Tin tức thị trường">
             <v-icon size="25">mdi:mdi-arrow-right</v-icon>
           </v-btn>
         </div>
         <div class="mowgrid" v-if="market_post[0]">
           <div class="item" v-for="(item, index) in market_post.slice(0, 3)" :key="index">
             <div class="image">
-              <img :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" />
+              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" />
             </div>
             <div class="content">
               <h2 @click="toDetail(item.slug)">{{ item.title }}</h2>

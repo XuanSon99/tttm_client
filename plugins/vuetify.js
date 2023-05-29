@@ -5,7 +5,7 @@ import * as labs from 'vuetify/labs/components'
 import { aliases, fa } from 'vuetify/iconsets/fa'
 import { mdi } from 'vuetify/iconsets/mdi'
 import '@fortawesome/fontawesome-free/css/all.css'
-// import '@mdi/font/css/materialdesignicons.css'
+import '@mdi/font/css/materialdesignicons.css'
 
 export default defineNuxtPlugin(nuxtApp => {
   const vuetify = createVuetify({

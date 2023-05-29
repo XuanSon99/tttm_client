@@ -22,7 +22,7 @@
               <tr>
                 <td>
                   <div class="align-center">
-                    <img :src="item.columns.image" class="table-image" alt="" />
+                    <nuxt-img format="webp" :src="item.columns.image" class="table-image" alt="" />
                     <span class="ml-2">{{ item.columns.symbol.toUpperCase() }}</span>
                   </div>
                 </td>
@@ -59,14 +59,14 @@
           <div class="mowtit">
             <span>Tin tức crypto</span>
           </div>
-          <v-btn icon color="primary" size="35" variant="text" to="/danh-muc/crypto">
+          <v-btn icon color="primary" size="35" variant="text" to="/danh-muc/crypto" aria-label="Crypto">
             <v-icon size="25">mdi:mdi-arrow-right</v-icon>
           </v-btn>
         </div>
         <div class="mowgrid" v-if="crypto_post[0]">
           <div class="item" v-for="(item, index) in crypto_post.slice(0, 3)" :key="index">
             <div class="image">
-              <img :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" />
+              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" />
             </div>
             <div class="content">
               <h2 @click="toDetail(item.slug)">{{ item.title }}</h2>

@@ -16,7 +16,7 @@
         <div class="mowgrid" v-if="postList[0]">
           <div class="item" v-for="(item, index) in postList" :key="index">
             <div class="image">
-              <img
+              <nuxt-img format="webp"
                 :src="$image(item.image)"
                 @click="toDetail(item.slug)"
                 :alt="item.title"

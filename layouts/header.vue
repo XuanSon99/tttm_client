@@ -2,24 +2,24 @@
     <header>
       <div class="head">
         <div class="mowtainer align-center space">
-          <router-link tag="div" to="/" class="logo">
+          <router-link tag="div" to="/" class="logo" aria-label="Trang chủ">
             <div class="flex align-center">
-              <img src="/img/logo-footer.png" />
+              <nuxt-img format="webp" src="/img/logo-footer.png" alt="" />
             </div>
           </router-link>
           <div class="menu">
             <div class="search">
               <form class="search-box">
-                <input type="text" placeholder="Tìm kiếm" v-model="query" />
-                <button type="submit" @click.prevent="searchHandle()">
+                <input type="text" placeholder="Tìm kiếm" v-model="query" aria-label="Tìm kiếm" />
+                <button type="submit" @click.prevent="searchHandle()" aria-label="Tìm kiếm">
                   <i class="fas fa-search"></i>
                 </button>
               </form>
             </div>
-            <a href="https://t.me/ChoOTCVN_bot" class="btn-all outline mx-3" target="blank">
+            <a href="https://t.me/ChoOTCVN_bot" class="btn-all outline mx-3" target="blank" aria-label="Đăng ký">
               Đăng ký
             </a>
-            <a href="https://t.me/chootcvn" class="btn-all" target="blank">
+            <a href="https://t.me/chootcvn" class="btn-all" target="blank" aria-label="Tham giá">
               Tham gia
             </a>
           </div>
@@ -47,21 +47,21 @@
               </div>
             </div>
             <div class="flex mt-3">
-              <a href="https://t.me/ChoOTCVN_bot" class="btn-all outline mx-3" target="blank">
+              <a href="https://t.me/ChoOTCVN_bot" class="btn-all outline mx-3" target="blank" aria-label="Đăng ký">
                 Đăng ký
               </a>
-              <a href="https://t.me/chootcvn" class="btn-all" target="blank">
+              <a href="https://t.me/chootcvn" class="btn-all" target="blank" aria-label="Tham gia">
                 Tham gia
               </a>
             </div>
           </div>
         </div>
       </div>
-      <div id="menu">
+      <div id="menu-bar">
         <div class="mowtainer align-center justify-center">
           <div class="menu">
             <div class="main-menu">
-              <router-link to="/" class="menu-item">Trang chủ</router-link>
+              <router-link to="/" class="menu-item" aria-label="Trang chủ">Trang chủ</router-link>
             </div>
             <div class="main-menu" v-for="(item, index) in nav" :key="index">
               <dev class="menu-item">
@@ -80,7 +80,7 @@
               </dev>
             </div>
             <div class="main-menu">
-              <a class="menu-item" href="https://t.me/ChoOTCVN_support" target="_blank">Liên hệ</a>
+              <a class="menu-item" href="https://t.me/ChoOTCVN_support" target="_blank" aria-label="Liên hệ">Liên hệ</a>
             </div>
           </div>
         </div>

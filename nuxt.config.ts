@@ -16,12 +16,16 @@ export default defineNuxtConfig({
     build: {
         transpile: ['vuetify'],
     },
+    modules: [
+        '@nuxt/image-edge',
+    ],
     app: {
         head: {
             title: 'Chợ OTC Việt Nam',
             meta: [
                 { name: 'keywords', content: 'mua bán usdt, bitcoin, btc, eth, otc, crypto, tỷ giá, ngoại tệ, giá vàng, chứng khoán' },
                 { name: 'news_keywords', content: 'mua bán usdt, bitcoin, btc, eth, otc, crypto, tỷ giá, ngoại tệ, giá vàng, chứng khoán' },
+                { name: 'description', content: 'Mua bán USDT giá rẻ, uy tín số 1 Việt Nam. Cập nhật tỷ giá & tin tức thị trường nhanh chóng, chính xác' },
                 { hid: 'og:title', property: 'og:title', content: 'Chợ OTC Việt Nam' },
                 { hid: 'og:description', property: 'og:description', content: 'Mua bán USDT giá rẻ, uy tín số 1 Việt Nam. Cập nhật tỷ giá & tin tức thị trường nhanh chóng, chính xác' },
                 { hid: 'og:image', property: 'og:image', content: 'https://chootc.com/img/thumbnail.jpg' },
@@ -66,6 +70,9 @@ export default defineNuxtConfig({
                     type: 'text/javascript',
                 }
             ],
+            htmlAttrs: {
+                lang: 'vi'
+            }
         }
     },
     nitro: {

@@ -54,7 +54,7 @@
       </div>
       <div v-if="tab == 5" class="noti">
         <div class="paddin">
-          <img src="/img/success.png" alt="" />
+          <nuxt-img format="webp" src="/img/success.png" alt="" />
           <p>
             Chúc mừng bạn đã gửi yêu cầu KYC thành công. Vui lòng liên hệ Admin
             để được thông qua!
@@ -63,7 +63,7 @@
       </div>
       <div v-if="tab == 6" class="noti">
         <div class="paddin">
-          <img src="/img/error.png" alt="" />
+          <nuxt-img format="webp" src="/img/error.png" alt="" />
           <p>
             Yêu cầu KYC đã được gửi trước đó. Vui lòng liên hệ Admin để được
             thông qua!

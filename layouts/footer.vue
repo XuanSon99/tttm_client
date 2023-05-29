@@ -3,14 +3,14 @@
     <div class="mowtainer">
       <div class="mowgrid grid-footer align-start">
         <div class="foot-logo relative">
-          <img src="/img/logo-footer-2.png" alt="">
+          <nuxt-img format="webp" src="/img/logo-footer-2.png" alt="" />
           <div class="mt-5 d-flex contact">
             <v-icon size="18" class="mr-2">fas fa-envelope</v-icon>
             <a href="mailto:contact@chootc.com">contact@chootc.com</a>
           </div>
           <div class="mt-2 d-flex contact">
             <v-icon size="18" class="mr-2">fab fa-telegram-plane</v-icon>
-            <a href="https://t.me/ChoOTCVN_support" target="_blank">@chootcvn_support</a>
+            <a href="https://t.me/ChoOTCVN_support" target="_blank" aria-label="Telegram Support">@chootcvn_support</a>
           </div>
         </div>
         <div>
@@ -40,16 +40,16 @@
           <router-link to="/quy-dinh-chinh-sach" class="px-5">Quy định & chính xách</router-link>
         </div>
         <div class="flex justify-end">
-          <v-btn icon size="35" variant="text" href="https://t.me/chootcvn" target="_blank">
+          <v-btn icon size="35" variant="text" href="https://t.me/chootcvn" target="_blank" aria-label="Telegram">
             <v-icon size="22">fa-brands fa-telegram</v-icon>
           </v-btn>
-          <v-btn icon size="35" variant="text" href="https://www.facebook.com/Chootcvietnam" target="_blank">
+          <v-btn icon size="35" variant="text" href="https://www.facebook.com/Chootcvietnam" target="_blank" aria-label="Facebook">
             <v-icon size="22">fa-brands fa-facebook</v-icon>
           </v-btn>
-          <v-btn icon size="35" variant="text" href="https://twitter.com/chootcvn" target="_blank">
+          <v-btn icon size="35" variant="text" href="https://twitter.com/chootcvn" target="_blank" aria-label="Twitter">
             <v-icon size="22">fa-brands fa-twitter</v-icon>
           </v-btn>
-          <v-btn icon size="35" variant="text" href="https://www.tiktok.com/@chootcvietnam" target="_blank">
+          <v-btn icon size="35" variant="text" href="https://www.tiktok.com/@chootcvietnam" target="_blank" aria-label="Tiktok">
             <v-icon size="22">fa-brands fa-tiktok</v-icon>
           </v-btn>
         </div>

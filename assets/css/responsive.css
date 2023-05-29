@@ -277,4 +277,7 @@
     .foot-logo img {
         height: 113px;
     }
+    .foot {
+        grid-template-columns: 1fr !important;
+    }
 }

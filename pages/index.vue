@@ -15,7 +15,10 @@
             </h1>
           </div>
           <div class="image">
-            <img src="/img/home/banner.gif" alt="" />
+            <!-- <img src="/img/home/banner.gif" alt="" /> -->
+            <video autoplay loop muted playsinline>
+              <source src="/img/home/banner.webm" type="video/webm" />
+            </video>
           </div>
         </div>
       </div>
@@ -31,10 +34,10 @@
               </div>
             </div>
             <div class="pd-30" v-if="tab == 0">
-              <label>Tôi muốn trao đổi</label>
+              <label for="buy_vnd">Tôi muốn trao đổi</label>
               <div class="input-box">
-                <input type="text" class="exchange-input" v-model="buy_vnd" @input="buyVND" @focus="unFormatBuy"
-                  @blur="buy_vnd = formatVNPrice(buy_vnd)" />
+                <input type="text" id="buy_vnd" class="exchange-input" v-model="buy_vnd" @input="buyVND"
+                  @focus="unFormatBuy" @blur="buy_vnd = formatVNPrice(buy_vnd)" />
                 <div class="unit">
                   <v-select class="mt-7" variant="outlined" density="compact" color="primary" :items="p2p_currency_list"
                     v-model="p2p_currency.buy">
@@ -42,7 +45,7 @@
                       <v-list-item v-bind="props">
                         <template #title>
                           <div class="d-flex align-center p2p-title">
-                            <img :src="'/img/p2p/' + item.title + '.png'" alt="" />
+                            <nuxt-img format="webp" :src="'/img/p2p/' + item.title + '.png'" alt="" />
                             {{ item.title.toUpperCase() }}
                           </div>
                         </template>
@@ -51,9 +54,9 @@
                   </v-select>
                 </div>
               </div>
-              <label>Tôi sẽ nhận được≈</label>
+              <label for="buy_usdt">Tôi sẽ nhận được≈</label>
               <div class="input-box">
-                <input type="text" class="exchange-input" v-model="buy_usdt" @input="buyUSDT" />
+                <input type="text" id="buy_usdt" class="exchange-input" v-model="buy_usdt" @input="buyUSDT" />
                 <div class="unit">
                   <v-select class="mt-7" variant="outlined" density="compact" color="primary" :items="p2p_token_list"
                     v-model="p2p_token.buy">
@@ -61,7 +64,7 @@
                       <v-list-item v-bind="props">
                         <template #title>
                           <div class="d-flex align-center p2p-title">
-                            <img :src="'/img/p2p/' + item.title + '.svg'" alt="" />
+                            <nuxt-img format="webp" :src="'/img/p2p/' + item.title + '.svg'" alt="" />
                             {{ item.title.toUpperCase() }}
                           </div>
                         </template>
@@ -80,32 +83,32 @@
               </div>
               <div class="detail-price">
                 <div class="item">
-                  <img src="/img/logo.png" alt="" />
+                  <nuxt-img format="webp" src="/img/logo.png" alt="" />
                   <h3>Chợ OTC VN</h3>
                   <h4>
                     <span>Giá mua:</span>
                     <b v-if="p2p_token.buy == 'usdt' && p2p_currency.buy == 'vnd'
-                      ">{{ formatVNPrice(buy_price) }}</b>
+                    ">{{ formatVNPrice(buy_price) }}</b>
                     <b v-else>{{ formatPrice(buy_price) }}</b>
                   </h4>
                 </div>
                 <div class="item">
-                  <img src="/img/binance.png" alt="" />
+                  <nuxt-img format="webp" src="/img/binance.png" alt="" />
                   <h3>P2P Binance</h3>
                   <h4>
                     <span>Giá mua:</span>
                     <b v-if="p2p_token.buy == 'usdt' && p2p_currency.buy == 'vnd'
-                      ">{{ formatVNPrice(buy_price + 5) }}</b>
+                    ">{{ formatVNPrice(buy_price + 5) }}</b>
                     <b v-else>{{ formatPrice(buy_price) }}</b>
                   </h4>
                 </div>
               </div>
-              <a href="https://t.me/chootcvn" target="_blank" class="btn-all">Mua miễn phí</a>
+              <a href="https://t.me/chootcvn" target="_blank" class="btn-all" aria-label="Mua miễn phí">Mua miễn phí</a>
             </div>
             <div class="pd-30" v-else>
-              <label>Tôi muốn trao đổi</label>
+              <label for="sell_usdt">Tôi muốn trao đổi</label>
               <div class="input-box">
-                <input type="text" class="exchange-input" v-model="sell_usdt" @input="sellUSDT" />
+                <input type="text" id="sell_usdt" class="exchange-input" v-model="sell_usdt" @input="sellUSDT" />
                 <div class="unit">
                   <v-select class="mt-7" variant="outlined" density="compact" color="primary" :items="p2p_token_list"
                     v-model="p2p_token.sell">
@@ -113,7 +116,7 @@
                       <v-list-item v-bind="props">
                         <template #title>
                           <div class="d-flex align-center p2p-title">
-                            <img :src="'/img/p2p/' + item.title + '.svg'" alt="" />
+                            <nuxt-img format="webp" :src="'/img/p2p/' + item.title + '.svg'" alt="" />
                             {{ item.title.toUpperCase() }}
                           </div>
                         </template>
@@ -122,10 +125,10 @@
                   </v-select>
                 </div>
               </div>
-              <label>Tôi sẽ nhận được≈</label>
+              <label for="sell_vnd">Tôi sẽ nhận được≈</label>
               <div class="input-box">
-                <input type="text" class="exchange-input" v-model="sell_vnd" @input="sellVND" @focus="unFormatSell"
-                  @blur="sell_vnd = formatVNPrice(sell_vnd)" />
+                <input type="text" id="sell_vnd" class="exchange-input" v-model="sell_vnd" @input="sellVND"
+                  @focus="unFormatSell" @blur="sell_vnd = formatVNPrice(sell_vnd)" />
                 <div class="unit">
                   <v-select class="mt-7" variant="outlined" density="compact" color="primary" :items="p2p_currency_list"
                     v-model="p2p_currency.sell">
@@ -133,7 +136,7 @@
                       <v-list-item v-bind="props">
                         <template #title>
                           <div class="d-flex align-center p2p-title">
-                            <img :src="'/img/p2p/' + item.title + '.png'" alt="" />
+                            <nuxt-img format="webp" :src="'/img/p2p/' + item.title + '.png'" alt="" />
                             {{ item.title.toUpperCase() }}
                           </div>
                         </template>
@@ -152,27 +155,28 @@
               </div>
               <div class="detail-price">
                 <div class="item">
-                  <img src="/img/logo.png" alt="" />
+                  <nuxt-img format="webp" src="/img/logo.png" alt="" />
                   <h3>Chợ OTC</h3>
                   <h4 class="sell-price">
                     <span>Giá bán:</span>
                     <b v-if="p2p_token.sell == 'usdt' && p2p_currency.sell == 'vnd'
-                      ">{{ formatVNPrice(sell_price) }}</b>
+                    ">{{ formatVNPrice(sell_price) }}</b>
                     <b v-else>{{ formatPrice(sell_price) }}</b>
                   </h4>
                 </div>
                 <div class="item">
-                  <img src="/img/binance.png" alt="" />
+                  <nuxt-img format="webp" src="/img/binance.png" alt="" />
                   <h3>P2P Binance</h3>
                   <h4 class="sell-price">
                     <span>Giá bán:</span>
                     <b v-if="p2p_token.sell == 'usdt' && p2p_currency.sell == 'vnd'
-                      ">{{ formatVNPrice(sell_price - 5) }}</b>
+                    ">{{ formatVNPrice(sell_price - 5) }}</b>
                     <b v-else>{{ formatPrice(sell_price) }}</b>
                   </h4>
                 </div>
               </div>
-              <a href="https://t.me/chootcvn" target="_blank" class="btn-all btn-sell">Bán miễn phí</a>
+              <a href="https://t.me/chootcvn" target="_blank" class="btn-all btn-sell" aria-label="Bán miễn phí">Bán miễn
+                phí</a>
             </div>
           </div>
           <div class="item pd-30">
@@ -231,13 +235,14 @@
               <div class="mowtit">
                 <span>Hướng dẫn người mới</span>
               </div>
-              <v-btn icon size="35" variant="text" color="primary" to="/danh-muc/huong-dan-nguoi-moi">
+              <v-btn icon size="35" variant="text" color="primary" to="/danh-muc/huong-dan-nguoi-moi"
+                aria-label="Hướng dẫn người mới">
                 <v-icon size="25">mdi:mdi-arrow-right</v-icon>
               </v-btn>
             </div>
             <div class="item-news mt-5" v-for="(item, index) in tutorial_post" :key="index">
               <div class="image" @click="toDetail(item.slug)">
-                <img :src="$image(item.image)" alt="" />
+                <nuxt-img format="webp" :src="$image(item.image)" alt="" />
               </div>
               <div class="content">
                 <h3 @click="toDetail(item.slug)">{{ item.title }}</h3>
@@ -308,14 +313,15 @@
           <div class="mowtit">
             <span>Tin tức thị trường</span>
           </div>
-          <v-btn icon color="primary" size="35" variant="text" to="/danh-muc/tin-tuc-thi-truong">
+          <v-btn icon color="primary" size="35" variant="text" to="/danh-muc/tin-tuc-thi-truong"
+            aria-label="Tin tức thị trường">
             <v-icon size="25">mdi:mdi-arrow-right</v-icon>
           </v-btn>
         </div>
         <div class="mowgrid" v-if="market_post[0]">
           <div class="item" v-for="(item, index) in market_post.slice(0, 3)" :key="index">
             <div class="image">
-              <img :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" />
+              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" />
             </div>
             <div class="content">
               <h2 @click="toDetail(item.slug)">{{ item.title }}</h2>
@@ -360,7 +366,7 @@
                 <tr>
                   <td>
                     <div class="align-center">
-                      <img :src="item.columns.image" class="table-image" alt="" />
+                      <nuxt-img format="webp" :src="item.columns.image" class="table-image" alt="" />
                       <span class="ml-2">{{ item.columns.symbol.toUpperCase() }}</span>
                     </div>
                   </td>
