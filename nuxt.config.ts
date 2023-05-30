@@ -34,7 +34,7 @@ export default defineNuxtConfig({
                 { hid: 'og:image:height', property: 'og:image:height', content: '628' },
                 { hid: 'og:image:width', property: 'og:image:width', content: '1200' },
                 { hid: 'og:type', property: 'og:type', content: 'article' },
-                { name: 'google-site-verification', content: 'weLK3fBXhmGAhETMrmS8_nSj0RHlBYLNJtWGwD5uK6c' },
+                { name: 'google-site-verification', content: 'RVRV7yV3NVcrTJk9zPJLs3isxpN5erzbQk8dT7FDaDc' },
                 { name: 'robots', content: 'index,follow,all' },
                 { name: 'copyright', content: 'chootcvn' },
                 { name: 'author', content: 'chootcvn' },

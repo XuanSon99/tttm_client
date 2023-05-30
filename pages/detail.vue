@@ -122,6 +122,7 @@ useHead({
   title: info.value.title,
   meta: [
     { hid: 'og:title', property: 'og:title', content: info.value.title },
+    { name: 'description', content: info.value.meta_description},
     { hid: 'og:description', property: 'og:description', content: info.value.meta_description },
     { name: 'keywords', content: keywords },
     { name: 'news_keywords', content: keywords },
