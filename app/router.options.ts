@@ -8,35 +8,31 @@ export default <RouterOptions>{
     },
     {
       path: '/danh-muc/:id',
-      component: () => import('~/pages/blog.vue'),
+      component: () => import('~/pages/tin-tuc.vue'),
     },
     {
       path: '/tin-tuc',
-      component: () => import('~/pages/blog.vue'),
+      component: () => import('~/pages/tin-tuc.vue'),
     },
     {
       path: '/tim-kiem/:id',
-      component: () => import('~/pages/blog.vue'),
-    },
-    {
-      path: '/kyc/:id',
-      component: () => import('~/pages/kyc.vue'),
+      component: () => import('~/pages/tin-tuc.vue'),
     },
     {
       path: '/tien-dien-tu',
-      component: () => import('~/pages/rate/crypto.vue'),
+      component: () => import('~/pages/tien-dien-tu.vue'),
     },
     {
       path: '/gia-vang',
-      component: () => import('~/pages/rate/gold.vue'), 
+      component: () => import('~/pages/gia-vang.vue'), 
     },
     {
       path: '/chung-khoan',
-      component: () => import('~/pages/rate/stock.vue'),
+      component: () => import('~/pages/chung-khoan.vue'),
     },
     {
       path: '/ngoai-te',
-      component: () => import('~/pages/rate/currency.vue'),
+      component: () => import('~/pages/ngoai-te.vue'),
     },
     {
       path: '/:id',
