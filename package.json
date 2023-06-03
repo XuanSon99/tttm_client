@@ -28,6 +28,7 @@
     "rss": "^1.2.2",
     "sass": "^1.62.1",
     "vue-meta": "^2.4.0",
+    "vue-social-sharing": "^4.0.0-alpha4",
     "vuetify": "^3.2.2"
   }
 }

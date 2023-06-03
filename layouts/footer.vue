@@ -3,7 +3,7 @@
     <div class="mowtainer">
       <div class="mowgrid grid-footer align-start">
         <div class="foot-logo relative">
-          <nuxt-img format="webp" src="/img/logo-footer-2.png" alt="" />
+          <nuxt-img format="webp" src="/img/logo-footer-2.png" alt="" loading="lazy" />
           <div class="mt-5 d-flex contact">
             <v-icon size="18" class="mr-2">fas fa-envelope</v-icon>
             <a href="mailto:contact@chootc.com">contact@chootc.com</a>

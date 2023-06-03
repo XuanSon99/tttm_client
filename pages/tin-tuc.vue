@@ -20,6 +20,7 @@
                 :src="$image(item.image)"
                 @click="toDetail(item.slug)"
                 :alt="item.title"
+                loading="lazy"
               />
             </div>
             <div class="content">

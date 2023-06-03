@@ -19,6 +19,30 @@
             </p>
             <div class="details">
               <div v-html="configBody(info.created_at, info.body)"></div>
+              <div v-if="checkToAddFoot(info.created_at)">
+                <br>
+                <p>Hy vọng bài viết sẽ mang đến cho bạn đọc những kiến thức hữu ích. Đừng quên liên hệ ngay với Admin <a
+                    href="https://chootc.com" target="_blank" rel="noopener noreferrer">chợ OTC Việt Nam</a> nếu quý khách
+                  đang có nhu cầu mua bán <a
+                    href="https://chootc.com/dong-tether-usdt-la-gi-cach-phan-biet-mang-luoi-blockchain" target="_blank"
+                    rel="noopener noreferrer">USDT</a> giá tốt và uy tín nhất tại Việt Nam.</p>
+                <p><i>Tham gia giao dịch OTC tại:</i></p>
+                <ul>
+                  <li>Telegram: <a href="https://t.me/chootcvn" target="_blank" rel="noopener noreferrer">@chootcvn</a>
+                  </li>
+                  <li>Website: <a href="https://chootc.com" target="_blank" rel="noopener noreferrer">chootc.com</a></li>
+                  <li>Facebook: <a href="https://www.facebook.com/chootcvietnam" target="_blank"
+                      rel="noopener noreferrer">fb.com/chootcvietnam</a></li>
+                </ul>
+                <div>
+                  <!-- <ShareNetwork network="facebook" url="https://news.vuejs.org/issues/180"
+                    title="Say hi to Vite! A brand new, extremely fast development setup for Vue."
+                    description="This week, I’d like to introduce you to 'Vite', which means 'Fast'. It’s a brand new development setup created by Evan You."
+                    quote="The hot reload is so fast it\'s near instant. - Evan You" hashtags="vuejs,vite">
+                    Share on Facebook
+                  </ShareNetwork> -->
+                </div>
+              </div>
             </div>
           </div>
           <div class="details loader" v-else></div>
@@ -26,7 +50,7 @@
         <div class="feature" v-if="post_list.data[0]">
           <h1>Bài viết mới nhất</h1>
           <div class="space" v-for="(item, index) in post_list.data" :key="index">
-            <nuxt-img format="webp" :src="$image(item.image)" alt="" />
+            <nuxt-img format="webp" :src="$image(item.image)" loading="lazy" alt="" />
             <div class="title">
               <h3 @click="toDetail(item.slug)">{{ formatTitle(item.title) }}</h3>
               <p class="space">
@@ -50,7 +74,8 @@
         <div class="mowgrid">
           <div class="item" v-for="(item, index) in related_list.data" :key="index">
             <div class="image">
-              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" />
+              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title"
+                loading="lazy" />
             </div>
             <div class="content">
               <h2 @click="toDetail(item.slug)">{{ item.title }}</h2>
@@ -110,9 +135,17 @@ const toDetail = (slug) => {
 const configBody = (date, body) => {
   const time = new Date(date).getTime()
   if (time < 1684400071000) {
-    return body.replaceAll('https://chootc.com', 'https://api.chootc.com')
+    return body.replaceAll('<img src=\"https://chootc.com', '<img src=\"https://api.chootc.com')
   }
   return body
+}
+
+const checkToAddFoot = (date) => {
+  const time = new Date(date).getTime()
+  if (time >= 1685758964000) {
+    return true
+  }
+  return false
 }
 
 const default_keywords = 'mua bán usdt, bitcoin, btc, eth, otc, crypto, tỷ giá, ngoại tệ, giá vàng, chứng khoán'
@@ -122,7 +155,7 @@ useHead({
   title: info.value.title,
   meta: [
     { hid: 'og:title', property: 'og:title', content: info.value.title },
-    { name: 'description', content: info.value.meta_description},
+    { name: 'description', content: info.value.meta_description },
     { hid: 'og:description', property: 'og:description', content: info.value.meta_description },
     { name: 'keywords', content: keywords },
     { name: 'news_keywords', content: keywords },

@@ -4,7 +4,7 @@
         <div class="mowtainer align-center space">
           <router-link tag="div" to="/" class="logo" aria-label="Trang chủ">
             <div class="flex align-center">
-              <nuxt-img format="webp" src="/img/logo-footer.png" alt="" />
+              <nuxt-img format="webp" src="/img/logo-footer.png" alt="" loading="lazy" />
             </div>
           </router-link>
           <div class="menu">

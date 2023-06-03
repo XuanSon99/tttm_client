@@ -7,7 +7,7 @@
             <div class="space mb-5">
               <div class="mowtit">
                 <span>Tỷ giá ngoại tệ</span>
-                <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(1)">
+                <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(1)" aria-label="Làm mới">
                   <v-icon size="25">mdi:mdi-cached</v-icon>
                 </v-btn>
               </div>
@@ -65,13 +65,13 @@
               item-title="code" v-model="from" return-object>
             </v-autocomplete>
             <div class="justify-center flex mb-7">
-              <v-btn icon color="primary" class="ml-2" size="35" variant="text">
+              <v-btn icon color="primary" class="ml-2" size="35" variant="text" aria-label="Chuyển đổi">
                 <v-icon size="25">mdi:mdi-arrow-down</v-icon>
               </v-btn>
             </div>
             <v-text-field variant="outlined" class="mb-3" color="primary" label="Thành tiền" v-model="result"
               readonly></v-text-field>
-            <v-btn color="primary" size="large" variant="outlined" class="mb-3" block @click="convertHandle">Chuyển
+            <v-btn color="primary" size="large" variant="outlined" class="mb-3" block @click="convertHandle" aria-label="Chuyển đổi">Chuyển
               đổi</v-btn>
           </div>
         </div>
@@ -83,7 +83,7 @@
           <div class="space">
             <div class="mowtit mb-2">
               <span>Lực thị trường</span>
-              <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(4)">
+              <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(4)" aria-label="Làm mới">
                 <v-icon size="25">mdi:mdi-cached</v-icon>
               </v-btn>
             </div>

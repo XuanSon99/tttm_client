@@ -6,7 +6,7 @@
           <div class="space">
             <div class="mowtit mb-2">
               <span>Chứng khoán</span>
-              <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="getStock">
+              <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="getStock" aria-label="Làm mới">
                     <v-icon size="25">mdi:mdi-cached</v-icon>
                   </v-btn>
             </div>
@@ -54,7 +54,7 @@
         <div class="mowgrid" v-if="crypto_post[0]">
           <div class="item" v-for="(item, index) in crypto_post.slice(0, 3)" :key="index">
             <div class="image">
-              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" alt="" />
+              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" loading="lazy" alt="" />
             </div>
             <div class="content">
               <h2 @click="toDetail(item.slug)">{{ item.title }}</h2>

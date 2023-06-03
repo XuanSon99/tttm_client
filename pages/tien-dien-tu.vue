@@ -6,7 +6,7 @@
           <div class="space">
             <div class="mowtit">
               <span>Crypto</span>
-              <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="getCoin">
+              <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="getCoin" aria-label="Làm mới">
                 <v-icon size="25">mdi:mdi-cached</v-icon>
               </v-btn>
             </div>
@@ -22,7 +22,7 @@
               <tr>
                 <td>
                   <div class="align-center">
-                    <nuxt-img format="webp" :src="item.columns.image" class="table-image" alt="" />
+                    <nuxt-img format="webp" :src="item.columns.image" class="table-image" alt="" loading="lazy" />
                     <span class="ml-2">{{ item.columns.symbol.toUpperCase() }}</span>
                   </div>
                 </td>
@@ -66,7 +66,7 @@
         <div class="mowgrid" v-if="crypto_post[0]">
           <div class="item" v-for="(item, index) in crypto_post.slice(0, 3)" :key="index">
             <div class="image">
-              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" />
+              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" loading="lazy" />
             </div>
             <div class="content">
               <h2 @click="toDetail(item.slug)">{{ item.title }}</h2>

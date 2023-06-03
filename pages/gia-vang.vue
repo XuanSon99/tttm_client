@@ -7,7 +7,7 @@
             <div class="space">
               <div class="mowtit mb-2">
                 <span>Giá vàng</span>
-                <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="getGold">
+                <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="getGold" aria-label="Làm mới">
                   <v-icon size="25">mdi:mdi-cached</v-icon>
                 </v-btn>
               </div>
@@ -60,13 +60,13 @@
               item-title="name" v-model="from" return-object>
             </v-autocomplete>
             <div class="justify-center flex mb-7">
-              <v-btn icon color="primary" class="ml-2" size="35" variant="text">
+              <v-btn icon color="primary" class="ml-2" size="35" variant="text" aria-label="Chuyển đổi">
                 <v-icon size="25">mdi:mdi-arrow-down</v-icon>
               </v-btn>
             </div>
             <v-text-field variant="outlined" class="mb-3" color="primary" label="Thành tiền" v-model="result"
               readonly></v-text-field>
-            <v-btn color="primary" size="large" variant="outlined" class="mb-3" block @click="convertHandle">Chuyển
+            <v-btn color="primary" size="large" variant="outlined" class="mb-3" block @click="convertHandle" aria-label="Chuyển đổi">Chuyển
               đổi</v-btn>
           </div>
         </div>
@@ -85,7 +85,7 @@
         <div class="mowgrid" v-if="market_post[0]">
           <div class="item" v-for="(item, index) in market_post.slice(0, 3)" :key="index">
             <div class="image">
-              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" />
+              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" loading="lazy" />
             </div>
             <div class="content">
               <h2 @click="toDetail(item.slug)">{{ item.title }}</h2>

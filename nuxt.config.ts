@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     "assets/css/main.css",
     "assets/css/responsive.css",
   ],
-  plugins: ["~/plugins/axios.js"],
+  plugins: ["~/plugins/axios.js", "~/plugins/socialShare.ts"],
   runtimeConfig: {
     public: {
       baseURL: process.env.BASE_URL,

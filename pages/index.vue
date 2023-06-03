@@ -45,7 +45,7 @@
                       <v-list-item v-bind="props">
                         <template #title>
                           <div class="d-flex align-center p2p-title">
-                            <nuxt-img format="webp" :src="'/img/p2p/' + item.title + '.png'" alt="" />
+                            <nuxt-img format="webp" :src="'/img/p2p/' + item.title + '.png'" alt="" loading="lazy" />
                             {{ item.title.toUpperCase() }}
                           </div>
                         </template>
@@ -64,7 +64,7 @@
                       <v-list-item v-bind="props">
                         <template #title>
                           <div class="d-flex align-center p2p-title">
-                            <nuxt-img format="webp" :src="'/img/p2p/' + item.title + '.svg'" alt="" />
+                            <nuxt-img format="webp" :src="'/img/p2p/' + item.title + '.svg'" alt="" loading="lazy" />
                             {{ item.title.toUpperCase() }}
                           </div>
                         </template>
@@ -77,13 +77,13 @@
                 <span>Giá ước tính: 1 {{ p2p_token.buy.toUpperCase() }} ≈
                   {{ formatPrice(buy_price) }}
                   {{ p2p_currency.buy.toUpperCase() }}</span>
-                <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(2)">
+                <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(2)" aria-label="Làm mới">
                   <v-icon size="25">mdi:mdi-cached</v-icon>
                 </v-btn>
               </div>
               <div class="detail-price">
                 <div class="item">
-                  <nuxt-img format="webp" src="/img/logo.png" alt="" />
+                  <nuxt-img format="webp" src="/img/logo.png" alt="" loading="lazy" />
                   <h3>Chợ OTC VN</h3>
                   <h4>
                     <span>Giá mua:</span>
@@ -93,7 +93,7 @@
                   </h4>
                 </div>
                 <div class="item">
-                  <nuxt-img format="webp" src="/img/binance.png" alt="" />
+                  <nuxt-img format="webp" src="/img/binance.png" alt="" loading="lazy" />
                   <h3>P2P Binance</h3>
                   <h4>
                     <span>Giá mua:</span>
@@ -116,7 +116,7 @@
                       <v-list-item v-bind="props">
                         <template #title>
                           <div class="d-flex align-center p2p-title">
-                            <nuxt-img format="webp" :src="'/img/p2p/' + item.title + '.svg'" alt="" />
+                            <nuxt-img format="webp" :src="'/img/p2p/' + item.title + '.svg'" alt="" loading="lazy" />
                             {{ item.title.toUpperCase() }}
                           </div>
                         </template>
@@ -136,7 +136,7 @@
                       <v-list-item v-bind="props">
                         <template #title>
                           <div class="d-flex align-center p2p-title">
-                            <nuxt-img format="webp" :src="'/img/p2p/' + item.title + '.png'" alt="" />
+                            <nuxt-img format="webp" :src="'/img/p2p/' + item.title + '.png'" alt="" loading="lazy" />
                             {{ item.title.toUpperCase() }}
                           </div>
                         </template>
@@ -149,13 +149,13 @@
                 <span>Giá ước tính: 1 {{ p2p_token.sell.toUpperCase() }} ≈
                   {{ formatPrice(sell_price) }}
                   {{ p2p_currency.sell.toUpperCase() }}</span>
-                <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(2)">
+                <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(2)" aria-label="Làm mới">
                   <v-icon size="25">mdi:mdi-cached</v-icon>
                 </v-btn>
               </div>
               <div class="detail-price">
                 <div class="item">
-                  <nuxt-img format="webp" src="/img/logo.png" alt="" />
+                  <nuxt-img format="webp" src="/img/logo.png" alt="" loading="lazy" />
                   <h3>Chợ OTC</h3>
                   <h4 class="sell-price">
                     <span>Giá bán:</span>
@@ -165,7 +165,7 @@
                   </h4>
                 </div>
                 <div class="item">
-                  <nuxt-img format="webp" src="/img/binance.png" alt="" />
+                  <nuxt-img format="webp" src="/img/binance.png" alt="" loading="lazy" />
                   <h3>P2P Binance</h3>
                   <h4 class="sell-price">
                     <span>Giá bán:</span>
@@ -183,7 +183,7 @@
             <div class="space mb-5">
               <div class="mowtit">
                 <span>Tỷ giá ngoại tệ</span>
-                <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(1)">
+                <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(1)" aria-label="Làm mới">
                   <v-icon size="25">mdi:mdi-cached</v-icon>
                 </v-btn>
               </div>
@@ -242,7 +242,7 @@
             </div>
             <div class="item-news mt-5" v-for="(item, index) in tutorial_post" :key="index">
               <div class="image" @click="toDetail(item.slug)">
-                <nuxt-img format="webp" :src="$image(item.image)" alt="" />
+                <nuxt-img format="webp" :src="$image(item.image)" alt="" loading="lazy" />
               </div>
               <div class="content">
                 <h3 @click="toDetail(item.slug)">{{ item.title }}</h3>
@@ -256,11 +256,11 @@
             <div class="space mb-2">
               <div class="mowtit">
                 <span>Giá vàng</span>
-                <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(5)">
+                <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(5)" aria-label="Làm mới">
                   <v-icon size="25">mdi:mdi-cached</v-icon>
                 </v-btn>
               </div>
-              <v-btn variant="text" to="/gia-vang">
+              <v-btn variant="text" to="/gia-vang" aria-label="Quy đổi">
                 Quy đổi
                 <v-icon class="ml-1" size="20" color="primary">
                   mdi:mdi-arrow-right
@@ -321,7 +321,7 @@
         <div class="mowgrid" v-if="market_post[0]">
           <div class="item" v-for="(item, index) in market_post.slice(0, 3)" :key="index">
             <div class="image">
-              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" />
+              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" loading="lazy" />
             </div>
             <div class="content">
               <h2 @click="toDetail(item.slug)">{{ item.title }}</h2>
@@ -350,7 +350,7 @@
             <div class="space">
               <div class="mowtit">
                 <span>Crypto</span>
-                <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(3)">
+                <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(3)" aria-label="Làm mới">
                   <v-icon size="25">mdi:mdi-cached</v-icon>
                 </v-btn>
               </div>
@@ -366,7 +366,7 @@
                 <tr>
                   <td>
                     <div class="align-center">
-                      <nuxt-img format="webp" :src="item.columns.image" class="table-image" alt="" />
+                      <nuxt-img format="webp" :src="item.columns.image" class="table-image" alt="" loading="lazy" />
                       <span class="ml-2">{{ item.columns.symbol.toUpperCase() }}</span>
                     </div>
                   </td>
@@ -398,7 +398,7 @@
               <div class="space">
                 <div class="mowtit mb-2">
                   <span>Lực thị trường</span>
-                  <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(4)">
+                  <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(4)" aria-label="Làm mới">
                     <v-icon size="25">mdi:mdi-cached</v-icon>
                   </v-btn>
                 </div>
@@ -455,7 +455,7 @@
               <div class="space">
                 <div class="mowtit mb-2">
                   <span>Chứng khoán</span>
-                  <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(6)">
+                  <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="refreshHandle(6)" aria-label="Làm mới">
                     <v-icon size="25">mdi:mdi-cached</v-icon>
                   </v-btn>
                 </div>
