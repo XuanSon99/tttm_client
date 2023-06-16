@@ -14,10 +14,10 @@ export default defineNuxtConfig({
   build: {
     transpile: ["vuetify"],
   },
-  modules: ["@nuxt/image-edge", "nuxt-simple-sitemap"],
+  modules: ["@nuxt/image-edge", "nuxt-simple-sitemap", "nuxt-jsonld"],
   app: {
     head: {
-      title: "Chợ OTC Việt Nam",
+      title: "Chợ OTC Việt Nam - Mua bán USDT giá rẻ, uy tín số 1 Việt Nam",
       meta: [
         {
           name: "keywords",
@@ -110,10 +110,10 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ["/feed.xml", "/sitemap.xml"], 
+      routes: ["/feed.xml", "/sitemap.xml"],
     },
   },
   sitemap: {
-    siteUrl: 'https://chootc.com',
+    siteUrl: "https://chootc.com",
   },
 });

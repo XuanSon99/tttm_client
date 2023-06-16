@@ -25,6 +25,7 @@
     "easy-vue-camera": "^1.0.5",
     "ipx": "^1.1.0",
     "moment": "^2.29.4",
+    "nuxt-jsonld": "^2.0.8",
     "rss": "^1.2.2",
     "sass": "^1.62.1",
     "vue-meta": "^2.4.0",

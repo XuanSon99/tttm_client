@@ -171,6 +171,79 @@ useHead({
   ],
 })
 
+useJsonld([
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Trang chủ",
+          "item": "https://chootc.com"
+        }
+      ],
+      [
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": info.value.cate_name,
+          "item": `https://chootc.com/danh-muc/${info.value.category}`
+        }
+      ],
+    ]
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@context": "http://schema.org",
+      "@type": "WebPage",
+      "@id": `https://chootc.com/${info.value.slug}`
+    },
+    "headline": info.value.title,
+    "description": info.value.meta_description,
+    "image": {
+      "@context": "http://schema.org",
+      "@type": "ImageObject",
+      "url": `https://api.chootc.com/storage${info.value.image}`,
+    },
+    "author": {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": info.value.author,
+      "url": "https://dantri.com.vn"
+    },
+    "datePublished": info.value.created_at,
+    "dateModified": info.value.created_at,
+    "publisher": {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Chợ OTC Việt Nam",
+      "logo": {
+        "@context": "http://schema.org",
+        "@type": "ImageObject",
+        "url": "https://chootc.com/img/logo.png",
+        "height": "60px",
+        "width": "60px"
+      }
+    },
+    "about": keywords.split(", ")
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWorkSeries",
+    "name": info.value.title,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "ratingCount": info.value.body.split(" ").length
+    }
+  }
+]);
+
 </script>
 
 <style></style>
