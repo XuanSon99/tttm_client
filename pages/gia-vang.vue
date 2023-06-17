@@ -1,5 +1,10 @@
 <template>
   <main>
+    <Head>
+      <Title>Chợ OTC Việt Nam | Giá vàng trong nước và thế giới</Title>
+      <Meta name="description" content="Cập nhật giá vàng trong nước và thế giới. Tin tức giá vàng mới nhất."></Meta>
+      <Meta hid="og:description" property="og:description" content="Cập nhật giá vàng trong nước và thế giới. Tin tức giá vàng mới nhất."></Meta>
+    </Head>
     <section class="pd-top">
       <div class="mowtainer">
         <div class="mowgrid grid-bot">
@@ -114,12 +119,6 @@
 import axios from "axios";
 import moment from "moment";
 export default {
-  metaInfo() {
-    let data = {
-      title: `Chợ OTC Việt Nam | Trang chủ`,
-    };
-    return data;
-  },
   data() {
     return {
       gold: [],

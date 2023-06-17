@@ -1,5 +1,10 @@
 <template>
   <main>
+    <Head>
+      <Title>Chợ OTC Việt Nam | Tỷ giá ngoại tệ</Title>
+      <Meta name="description" content="Cập nhật tỷ giá ngoại tệ ngân hàng, thế giới. Lực mua bán thị trường."></Meta>
+      <Meta hid="og:description" property="og:description" content="Cập nhật tỷ giá ngoại tệ ngân hàng, thế giới. Lực mua bán thị trường."></Meta>
+    </Head>
     <section class="pd-top">
       <div class="mowtainer">
         <div class="mowgrid grid-bot">
@@ -145,12 +150,6 @@
 import axios from "axios";
 import moment from "moment";
 export default {
-  metaInfo() {
-    let data = {
-      title: `Chợ OTC Việt Nam | Ngoại tệ`,
-    };
-    return data;
-  },
   data() {
     return {
       bank: [],

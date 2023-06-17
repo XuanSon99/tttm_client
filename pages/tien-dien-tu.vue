@@ -1,5 +1,10 @@
 <template>
   <main>
+    <Head>
+      <Title>Chợ OTC Việt Nam | Tiền điện tử</Title>
+      <Meta name="description" content="Giá BTC, ETH, BNB, XRP, ADA, ... Tin tức crypto mới nhất."></Meta>
+      <Meta hid="og:description" property="og:description" content="Giá BTC, ETH, BNB, XRP, ADA, ... Tin tức crypto mới nhất."></Meta>
+    </Head>
     <section class="pd-top">
       <div class="mowtainer">
         <div class="item pd-30">
@@ -95,12 +100,6 @@
 import axios from "axios";
 import moment from "moment";
 export default {
-  metaInfo() {
-    let data = {
-      title: `Chợ OTC Việt Nam | Trang chủ`,
-    };
-    return data;
-  },
   data() {
     return {
       search: '',

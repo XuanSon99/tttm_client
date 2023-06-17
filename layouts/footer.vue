@@ -62,6 +62,16 @@
 
 <script>
 export default {
+  jsonld() {
+    return [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "url": "https://chootc.com",
+        "logo": 'https://chootc.com/img/logo.png'
+      },
+    ]
+  },
   data() {
     return {
       nav: [{ child: [] }, { child: [] }]

@@ -1,5 +1,11 @@
 <template>
   <main>
+
+    <Head>
+      <Title>Chợ OTC Việt Nam | Bảng giá thị trường chứng khoán trực tuyến hôm nay</Title>
+      <Meta name="description" content="Thông tin bảng giá thị trường chứng khoán trực tuyến hôm nay. Tìm hiểu cách chơi, cách đầu tư, giá cổ phiếu, tin nhanh chứng khoán."></Meta>
+      <Meta hid="og:description" property="og:description" content="Thông tin bảng giá thị trường chứng khoán trực tuyến hôm nay. Tìm hiểu cách chơi, cách đầu tư, giá cổ phiếu, tin nhanh chứng khoán."></Meta>
+    </Head>
     <section class="pd-top">
       <div class="mowtainer">
         <div class="item pd-30">
@@ -7,34 +13,34 @@
             <div class="mowtit mb-2">
               <span>Chứng khoán</span>
               <v-btn icon color="primary" class="ml-2" size="35" variant="text" @click="getStock" aria-label="Làm mới">
-                    <v-icon size="25">mdi:mdi-cached</v-icon>
-                  </v-btn>
+                <v-icon size="25">mdi:mdi-cached</v-icon>
+              </v-btn>
             </div>
           </div>
           <v-data-table :headers="headers.stock" :items="stock" :page.sync="page.stock" :items-per-page="7"
             hide-default-footer :mobile-breakpoint="0">
             <template v-slot:item="{ item }">
-                  <tr>
-                    <td>
-                      {{ item.columns.code }}
-                    </td>
-                    <td>
-                      {{ item.columns.name }}
-                    </td>
-                    <td>
-                      {{ item.columns.price }}
-                    </td>
-                    <td>
-                      <span :class="{
-                        'price-up': item.columns.change.includes('+') ? true : false,
-                        'price-down': item.columns.change.includes('-') ? true : false,
-                      }">
-                        {{ item.columns.change.substring(1) }}
-                      </span>
-                      <span class="ml-2">{{ item.columns.time }}</span>
-                    </td>
-                  </tr>
-                </template>
+              <tr>
+                <td>
+                  {{ item.columns.code }}
+                </td>
+                <td>
+                  {{ item.columns.name }}
+                </td>
+                <td>
+                  {{ item.columns.price }}
+                </td>
+                <td>
+                  <span :class="{
+                    'price-up': item.columns.change.includes('+') ? true : false,
+                    'price-down': item.columns.change.includes('-') ? true : false,
+                  }">
+                    {{ item.columns.change.substring(1) }}
+                  </span>
+                  <span class="ml-2">{{ item.columns.time }}</span>
+                </td>
+              </tr>
+            </template>
           </v-data-table>
           <v-pagination class="pt-3" v-model="page.stock" :length="Math.ceil(stock.length / 7)">
           </v-pagination>
@@ -47,14 +53,16 @@
           <div class="mowtit">
             <span>Tin tức thị trường</span>
           </div>
-          <v-btn icon color="primary" size="35" variant="text" to="/danh-muc/tin-tuc-thi-truong" aria-label="Tin tức thị trường">
+          <v-btn icon color="primary" size="35" variant="text" to="/danh-muc/tin-tuc-thi-truong"
+            aria-label="Tin tức thị trường">
             <v-icon size="25">mdi:mdi-arrow-right</v-icon>
           </v-btn>
         </div>
         <div class="mowgrid" v-if="crypto_post[0]">
           <div class="item" v-for="(item, index) in crypto_post.slice(0, 3)" :key="index">
             <div class="image">
-              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title" loading="lazy" alt="" />
+              <nuxt-img format="webp" :src="$image(item.image)" @click="toDetail(item.slug)" :alt="item.title"
+                loading="lazy" alt="" />
             </div>
             <div class="content">
               <h2 @click="toDetail(item.slug)">{{ item.title }}</h2>
@@ -83,12 +91,6 @@
 import axios from "axios";
 import moment from "moment";
 export default {
-  metaInfo() {
-    let data = {
-      title: `Chợ OTC Việt Nam | Trang chủ`,
-    };
-    return data;
-  },
   data() {
     return {
       stock: [],
