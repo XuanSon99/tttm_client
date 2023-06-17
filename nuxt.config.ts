@@ -61,7 +61,12 @@ export default defineNuxtConfig({
         },
         { name: "robots", content: "index,follow,all" },
         { name: "copyright", content: "chootcvn" },
+        { name: "distribution", content: "Global" },
+        { name: "revisit-after", content: "1 days" },
+        { name: "GENERATOR", content: "http://chootc.com" },
         { name: "author", content: "chootcvn" },
+        { name: "site_path", content: "http://chootc.com" },
+        
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: "Chợ OTC Việt Nam" },
         { name: "twitter:url", content: "https://chootc.com" },

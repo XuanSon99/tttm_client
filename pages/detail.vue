@@ -241,6 +241,80 @@ useJsonld([
       "bestRating": "5",
       "ratingCount": info.value.body.split(" ").length
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://chootc.com",
+    "logo": `https://api.chootc.com/storage${info.value.image}`
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://chootc.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://nhathuoclongchau.com.vn/tim-kiem/{search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "SiteNavigationElement",
+        "position": 2,
+        "name": "Về chúng tôi",
+        "description": "Cộng đồng Chợ OTC Việt Nam được ra mắt nhằm tập trung tất cả các luồng giao dịch OTC hiện có trên thị trường.",
+        "url": "https://chootc.com/ve-chung-toi"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 3,
+        "name": "Tỷ giá ngoại tệ",
+        "description": "Cập nhật tỷ giá ngoại tệ ngân hàng, thế giới. Lực mua bán thị trường.",
+        "url": "https://chootc.com/ngoai-te"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 4,
+        "name": "Giá vàng",
+        "description": "Cập nhật giá vàng trong nước và thế giới. Tin tức giá vàng mới nhất.",
+        "url": "https://chootc.com/gia-vang"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 5,
+        "name": "Tiền điện tử",
+        "description": "Giá BTC, ETH, BNB, XRP, ADA, ... Tin tức crypto mới nhất.",
+        "url": "https://chootc.com/tien-dien-tu"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 6,
+        "name": "Chứng khoán",
+        "description": "Thông tin bảng giá thị trường chứng khoán trực tuyến hôm nay. Tìm hiểu cách chơi, cách đầu tư, giá cổ phiếu, tin nhanh chứng khoán.",
+        "url": "https://chootc.com/chung-khoan"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 1,
+        "name": "Tin tức tài chính",
+        "description": "Tin tức cập nhật thị trường tài chính Việt Nam, tài chính quốc tế, chính sách tiền tệ của ngân hàng nhà nước, tỷ giá, lãi suất, giá vàng, thị trường ngoại hối.",
+        "url": "https://chootc.com/tin-tuc"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 7,
+        "name": "Hướng dẫn người mới",
+        "description": "Bộ kiến thức đầu tư Crypto cho người mới sẽ giúp bạn hiểu rõ về thị trường Crypto, bật mí chiến lược, cách đầu tư Crypto đơn giản hiệu quả.",
+        "url": "https://chootc.com/danh-muc/huong-dan-nguoi-moi"
+      },
+    ]
   }
 ]);
 
