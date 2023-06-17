@@ -66,7 +66,6 @@ export default defineNuxtConfig({
         { name: "GENERATOR", content: "http://chootc.com" },
         { name: "author", content: "chootcvn" },
         { name: "site_path", content: "http://chootc.com" },
-        
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: "Chợ OTC Việt Nam" },
         { name: "twitter:url", content: "https://chootc.com" },
