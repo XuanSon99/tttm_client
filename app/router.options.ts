@@ -38,5 +38,9 @@ export default <RouterOptions>{
       path: '/:id',
       component: () => import('~/pages/detail.vue'),
     },
+    {
+      path: '/p2p',
+      component: () => import('~/pages/p2p.vue'),
+    },
   ],
 };
