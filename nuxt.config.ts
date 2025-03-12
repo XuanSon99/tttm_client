@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     transpile: ["vuetify"],
   },
   // modules: ["@nuxt/image-edge", "nuxt-simple-sitemap", "nuxt-jsonld"],
-  modules: ["@nuxt/image-edge", "@nuxtjs/sitemap", "nuxt-jsonld"],
+  modules: ["@nuxt/image-edge", "sitemap", "nuxt-jsonld"],
   app: {
     head: {
       title: "Chợ OTC Việt Nam - Mua bán USDT giá rẻ, uy tín số 1 Việt Nam",
