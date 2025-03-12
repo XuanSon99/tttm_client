@@ -119,7 +119,10 @@ export default defineNuxtConfig({
       routes: ["/feed.xml", "/sitemap.xml"],
     },
   },
-  sitemap: {
-    siteUrl: "https://chootc.com",
-  },
+  // sitemap: {
+  //   siteUrl: "https://chootc.com",
+  // },
+  site: { 
+    url: 'https://example.com'
+  }, 
 });
