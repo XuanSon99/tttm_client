@@ -122,7 +122,4 @@ export default defineNuxtConfig({
   sitemap: {
     siteUrl: "https://chootc.com",
   },
-  // site: { 
-  //   url: 'https://example.com'
-  // }, 
 });

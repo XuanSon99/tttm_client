@@ -103,7 +103,7 @@
 <script setup>
 import moment from "moment";
 
-const api_url = 'https://api.chootc.com/api'
+const api_url = 'https://hi.muabanusdt.xyz/api'
 const { id } = useRoute().params
 
 const { data: info } = await useFetch(`${api_url}/posts/${id}`)
