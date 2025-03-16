@@ -65,8 +65,8 @@
         overflow: hidden;
     }
 
-    .banner {
-        display: none;
+    .slogan {
+        display: none !important;
     }
 
     .item.exchange {
@@ -79,6 +79,10 @@
 
     .foot {
         grid-template-columns: 1fr;
+    }
+    .banner{
+        height: 50vh;
+        min-height: fit-content;
     }
 }
 
@@ -279,5 +283,12 @@
     }
     .foot {
         grid-template-columns: 1fr !important;
+    }
+
+    .banner h1 {
+        font-size: 70px;
+    }
+    .banner p {
+        font-size: 26px;
     }
 }

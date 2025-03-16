@@ -19,14 +19,16 @@ export default {
     font-family: Inter, sans-serif;
     font-weight: 400;
     color: #fff;
-}
-
-.v-theme--dark.v-application {
-    background: #010313;
+    /* background: url("/img/background.svg") center top;
+    background-size: cover; */
+    background-image: linear-gradient(to right, #03204c33, #03204c33), url('/img/background.svg');
+    background-size: cover;
+    background-position: center, top;
+    background-repeat: no-repeat, no-repeat;
 }
 
 .text-primary {
-    color: #12ebe0 !important;
+    color: #37ffac !important;
 }
 
 .theme--dark.v-tabs>.v-tabs-bar,

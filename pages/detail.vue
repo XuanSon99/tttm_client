@@ -19,30 +19,6 @@
             </p>
             <div class="details">
               <div v-html="configBody(info.created_at, info.body)"></div>
-              <div v-if="checkToAddFoot(info.created_at)">
-                <br>
-                <p>Hy vọng bài viết sẽ mang đến cho bạn đọc những kiến thức hữu ích. Đừng quên liên hệ ngay với Admin <a
-                    href="https://chootc.com" target="_blank" rel="noopener noreferrer">chợ OTC Việt Nam</a> nếu quý khách
-                  đang có nhu cầu mua bán <a
-                    href="https://chootc.com/dong-tether-usdt-la-gi-cach-phan-biet-mang-luoi-blockchain" target="_blank"
-                    rel="noopener noreferrer">USDT</a> giá tốt và uy tín nhất tại Việt Nam.</p>
-                <p><i>Tham gia giao dịch OTC tại:</i></p>
-                <ul>
-                  <li>Telegram: <a href="https://t.me/chootcvn" target="_blank" rel="noopener noreferrer">@chootcvn</a>
-                  </li>
-                  <li>Website: <a href="https://chootc.com" target="_blank" rel="noopener noreferrer">chootc.com</a></li>
-                  <li>Facebook: <a href="https://www.facebook.com/chootcvietnam" target="_blank"
-                      rel="noopener noreferrer">fb.com/chootcvietnam</a></li>
-                </ul>
-                <div>
-                  <!-- <ShareNetwork network="facebook" url="https://news.vuejs.org/issues/180"
-                    title="Say hi to Vite! A brand new, extremely fast development setup for Vue."
-                    description="This week, I’d like to introduce you to 'Vite', which means 'Fast'. It’s a brand new development setup created by Evan You."
-                    quote="The hot reload is so fast it\'s near instant. - Evan You" hashtags="vuejs,vite">
-                    Share on Facebook
-                  </ShareNetwork> -->
-                </div>
-              </div>
             </div>
           </div>
           <div class="details loader" v-else></div>
