@@ -120,7 +120,7 @@ h1.title {
     width: -moz-max-content;
     width: max-content;
     margin: 0 auto;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     font-size: 48px;
 }
 
@@ -1515,12 +1515,40 @@ input.exchange-input:hover {
     }
 }
 
-.mexc{
+.mexc {
     padding: 0 40px;
     border-radius: 12px;
     box-shadow: 3px 3px 12px #0f1d2c, -3px -3px 12px #152536;
     text-align: center;
 }
-.mexc img{
+
+.mexc img {
     height: 200px;
+}
+
+.grid-resion {
+    grid-template-columns: 2fr 4fr;
+}
+
+.resion img {
+    width: 100%;
+}
+
+.list-resion img {
+    width: 18px;
+    filter: invert(93%) sepia(15%) saturate(1914%) hue-rotate(81deg) brightness(100%) contrast(103%);
+    margin-top: 6px;
+}
+
+.list-resion {
+    font-size: 20px;
+}
+
+.resion .mowgrid {
+    grid-gap: 80px;
+}
+
+.v-field__append-inner .v-icon--size-default {
+    font-size: 25px !important;
+    color: #37ffac;
 }

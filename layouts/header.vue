@@ -14,10 +14,10 @@
                 <router-link to="/" class="menu-item" aria-label="Trang chủ">Trang chủ</router-link>
               </div>
               <div class="main-menu">
-                <router-link to="/news" class="menu-item" aria-label="Trang chủ">Tin tức</router-link>
+                <router-link to="/tin-tuc" class="menu-item" aria-label="Trang chủ">Tin tức</router-link>
               </div>
               <div class="main-menu">
-                <a class="menu-item" href="https://t.me/ChoOTCVN_support" target="_blank" aria-label="Liên hệ">Hỗ trợ</a>
+                <a class="menu-item" href="https://t.me/iamnxa" target="_blank" aria-label="Liên hệ">Hỗ trợ</a>
               </div>
             </div>
           </div>
@@ -49,11 +49,8 @@
             </div>
           </div>
           <div class="flex mt-3">
-            <a href="https://t.me/ChoOTCVN_bot" class="btn-all outline mx-3" target="blank" aria-label="Đăng ký">
+            <a href="https://t.me/" class="btn-all outline mx-3" target="blank" aria-label="Đăng ký">
               Đăng ký
-            </a>
-            <a href="https://t.me/chootcvn" class="btn-all" target="blank" aria-label="Tham gia">
-              Tham gia
             </a>
           </div>
         </div>
@@ -86,61 +83,17 @@ export default {
       },
       nav: [
         {
-          name: "Giới thiệu",
-          child: [
-            {
-              slug: "/ve-chung-toi",
-              name: "Về chúng tôi",
-            },
-            {
-              slug: "/quy-dinh-chinh-sach",
-              name: "Quy định & chính sách",
-            },
-            {
-              slug: "/danh-muc/huong-dan-nguoi-moi",
-              name: "Hướng dẫn người mới",
-            },
-          ],
+          slug: "/",
+          name: "Trang chủ"
         },
         {
-          name: "Tỷ giá",
-          child: [
-            {
-              slug: "/ngoai-te",
-              name: "Ngoại tệ",
-            },
-            {
-              slug: "/gia-vang",
-              name: "Giá vàng",
-            },
-            {
-              slug: "/tien-dien-tu",
-              name: "Tiền điện tử",
-            },
-            {
-              slug: "/chung-khoan",
-              name: "Chứng khoán",
-            },
-          ],
-        },
-        {
-          post: true,
+          slug: "/tin-tuc",
           name: "Tin tức",
-          child: [],
         },
         {
-          post: true,
-          name: "Hướng dẫn",
-          child: [],
+          slug: "/lien-he",
+          name: "Liên hệ",
         },
-        {
-          slug: "tuyen-dung",
-          name: "Tuyển dụng",
-        },
-        // {
-        //   slug: "/lien-he",
-        //   name: "Liên hệ",
-        // },
       ],
       query: "",
     };

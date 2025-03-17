@@ -291,4 +291,8 @@
     .banner p {
         font-size: 26px;
     }
+    .logo-bot{
+        justify-content: center
+    }
+   
 }

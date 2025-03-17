@@ -58,8 +58,4 @@ export default {
 .v-data-table td {
     color: #fff;
 }
-
-.v-icon--size-default {
-    font-size: 14px;
-}
 </style>

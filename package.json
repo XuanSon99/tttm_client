@@ -28,6 +28,7 @@
     "nuxt-jsonld": "^2.0.8",
     "rss": "^1.2.2",
     "sass": "^1.62.1",
+    "sharp": "^0.33.5",
     "vue-3d-model": "^1.4.1",
     "vue-meta": "^2.4.0",
     "vue-social-sharing": "^4.0.0-alpha4",

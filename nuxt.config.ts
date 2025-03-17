@@ -19,29 +19,29 @@ export default defineNuxtConfig({
   // modules: ["@nuxt/image-edge", "sitemap", "nuxt-jsonld"],
   app: {
     head: {
-      title: "Chợ OTC Việt Nam - Mua bán USDT giá rẻ, uy tín số 1 Việt Nam",
+      title: "Tải tiền trên mạng",
       meta: [
         {
           name: "keywords",
           content:
-            "mua bán usdt, bitcoin, btc, eth, otc, crypto, tỷ giá, ngoại tệ, giá vàng, chứng khoán",
+            "Hệ thống CashBack của TTTM. Hoàn phí tối thiểu 50% mọi giao dịch trên MEXC",
         },
         {
           name: "news_keywords",
           content:
-            "mua bán usdt, bitcoin, btc, eth, otc, crypto, tỷ giá, ngoại tệ, giá vàng, chứng khoán",
+            "Hệ thống CashBack của TTTM. Hoàn phí tối thiểu 50% mọi giao dịch trên MEXC",
         },
         {
           name: "description",
           content:
-            "Mua bán USDT giá rẻ, uy tín số 1 Việt Nam. Cập nhật tỷ giá & tin tức thị trường nhanh chóng, chính xác",
+            "Hệ thống CashBack của TTTM. Hoàn phí tối thiểu 50% mọi giao dịch trên MEXC",
         },
         { hid: "og:title", property: "og:title", content: "Chợ OTC Việt Nam" },
         {
           hid: "og:description",
           property: "og:description",
           content:
-            "Mua bán USDT giá rẻ, uy tín số 1 Việt Nam. Cập nhật tỷ giá & tin tức thị trường nhanh chóng, chính xác",
+            "Hệ thống CashBack của TTTM. Hoàn phí tối thiểu 50% mọi giao dịch trên MEXC",
         },
         {
           hid: "og:image",
@@ -74,7 +74,7 @@ export default defineNuxtConfig({
         {
           name: "twitter:description",
           content:
-            "Mua bán USDT giá rẻ, uy tín số 1 Việt Nam. Cập nhật tỷ giá & tin tức thị trường nhanh chóng, chính xác",
+            "Hệ thống CashBack của TTTM. Hoàn phí tối thiểu 50% mọi giao dịch trên MEXC",
         },
         { name: "twitter:site", content: "@chootcvn" },
         { name: "twitter:creator", content: "@chootcvn" },
