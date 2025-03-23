@@ -28,7 +28,7 @@ export default {
 }
 
 .text-primary {
-    color: #37ffac !important;
+    color: #6bd3f9 !important;
 }
 
 .theme--dark.v-tabs>.v-tabs-bar,

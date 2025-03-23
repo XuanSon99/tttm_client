@@ -62,7 +62,7 @@ a {
 }
 
 a:hover {
-    color: #37ffac;
+    color: #6bd3f9;
 }
 
 .justify-center {
@@ -90,7 +90,7 @@ header .head>div {
 }
 
 .logo img {
-    height: 25px;
+    height: 60px;
     cursor: pointer;
 }
 
@@ -152,7 +152,7 @@ header .menu {
     background: #000211;
     z-index: 999;
     box-shadow: 0px 0px 30px #ffffff20;
-    color: #37ffac;
+    color: #6bd3f9;
     height: 0;
     width: max-content;
     overflow: hidden;
@@ -161,7 +161,7 @@ header .menu {
 }
 
 .menu-item .child a {
-    color: #37ffac;
+    color: #6bd3f9;
 }
 
 .menu-item .child-item {
@@ -192,7 +192,7 @@ header .menu {
     left: -80%;
     z-index: 999;
     transition: all 300ms ease;
-    background: #fff;
+    background: #131e2b;
     background-size: cover;
     height: 100vh;
     padding-top: 30px;
@@ -207,7 +207,7 @@ header .menu {
     text-align: left;
     padding-left: 20px;
     font-weight: 600;
-    color: #37ffac !important;
+    color: #6bd3f9 !important;
 }
 
 .mobile-menu i {
@@ -215,17 +215,16 @@ header .menu {
 }
 
 .mobile-menu .child-item {
-    margin-left: 38px;
-    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-bottom: 10px;
     font-weight: 600;
     display: block;
-    color: #1E2329;
 }
 
 .menu-bar {
     height: 3px;
     width: 25px;
-    background: #37ffac;
+    background: #6bd3f9;
     position: relative;
     transition: all 200ms ease;
     display: none;
@@ -238,7 +237,7 @@ header .menu {
     width: 25px;
     top: 7px;
     left: 0;
-    background: #37ffac;
+    background: #6bd3f9;
     transition: all 200ms ease;
 }
 
@@ -249,7 +248,7 @@ header .menu {
     width: 25px;
     bottom: 7px;
     left: 0;
-    background: #37ffac;
+    background: #6bd3f9;
     transition: all 200ms ease;
 }
 
@@ -377,28 +376,29 @@ header .menu {
 }
 
 header .menu .menu-item:hover {
-    color: #37ffac !important;
+    color: #6bd3f9 !important;
 }
 
 .text-gradient {
-    background: linear-gradient(150deg, #37ffac, #0099ff);
+    background: linear-gradient(to right, #2982bb, #6bd3f9, #fff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
 }
 
 .router-link-exact-active {
-    color: #37ffac !important;
+    color: #6bd3f9 !important;
 }
 
 .btn-all.outline {
-    background: linear-gradient(150deg, #37ffac, #0099ff);
+    background: linear-gradient(to right, #2982bb, #6bd3f9, #fff);
+    ;
     position: relative;
     z-index: 1;
 }
 
 .btn-all.outline:hover {
-    color: #37ffac;
+    color: #6bd3f9;
 }
 
 .btn-all.disabled {
@@ -444,7 +444,7 @@ header .btn-all {
 }
 
 .shadow {
-    background: linear-gradient(150deg, #37ffac, #0099ff);
+    background: linear-gradient(to right, #2982bb, #6bd3f9, #fff);
     position: relative;
     z-index: 1;
 }
@@ -457,7 +457,7 @@ header .btn-all {
     width: 95%;
     height: 90%;
     filter: blur(10px);
-    background: linear-gradient(150deg, #37ffac, #0099ff);
+    background: linear-gradient(to right, #2982bb, #6bd3f9, #fff);
     z-index: -1;
     opacity: 0.6;
 }
@@ -543,11 +543,11 @@ input.exchange-input {
 }
 
 input.exchange-input:focus {
-    border-color: #37ffac;
+    border-color: #6bd3f9;
 }
 
 input.exchange-input:hover {
-    border-color: #37ffac;
+    border-color: #6bd3f9;
 }
 
 .input-box .unit {
@@ -613,7 +613,7 @@ input.exchange-input:hover {
 
 .item h2 {
     font-size: 20px;
-    color: #37ffac;
+    color: #6bd3f9;
     font-weight: 600;
     text-align: center;
     margin-bottom: 10px;
@@ -641,7 +641,7 @@ input.exchange-input:hover {
 }
 
 .detail-price h4 {
-    color: #37ffac;
+    color: #6bd3f9;
     font-size: 14px;
     margin-bottom: 0;
     font-weight: 600;
@@ -735,7 +735,7 @@ input.exchange-input:hover {
 }
 
 .news .content .space {
-    color: #37ffac;
+    color: #6bd3f9;
 }
 
 .news .content h2 {
@@ -795,7 +795,7 @@ input.exchange-input:hover {
     width: 300px;
     box-shadow: 0px 0px 100px #ffffff10;
     border-radius: 3px;
-    border: 1px solid #37ffac;
+    border: 1px solid #6bd3f9;
 }
 
 .search-box input {
@@ -825,7 +825,7 @@ input.exchange-input:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #37ffac;
+    background: #6bd3f9;
     color: #fff;
     border-radius: 0 3px 3px 0;
     cursor: pointer;
@@ -839,28 +839,28 @@ input.exchange-input:hover {
 
 .page-link {
     background: none;
-    border: 1px solid #37ffac80;
-    color: #37ffac;
+    border: 1px solid #6bd3f980;
+    color: #6bd3f9;
     box-shadow: none !important;
     font-weight: 600;
 }
 
 .page-link:hover {
-    background: #37ffac;
+    background: #6bd3f9;
     color: #1d1f22;
-    border: 1px solid #37ffac80;
+    border: 1px solid #6bd3f980;
 }
 
 .page-item.active .page-link {
     color: #1d1f22;
-    background: #37ffac;
-    border: 1px solid #37ffac80;
+    background: #6bd3f9;
+    border: 1px solid #6bd3f980;
 }
 
 .page-item.disabled .page-link {
-    border: 1px solid #37ffac80;
+    border: 1px solid #6bd3f980;
     background: none;
-    color: #37ffac;
+    color: #6bd3f9;
     opacity: 0.5;
 }
 
@@ -928,7 +928,7 @@ input.exchange-input:hover {
 }
 
 .main-content .author {
-    color: #37ffac;
+    color: #6bd3f9;
     font-weight: 500;
     margin-bottom: 30px;
 }
@@ -979,7 +979,7 @@ input.exchange-input:hover {
 }
 
 .details a {
-    color: #37ffac !important;
+    color: #6bd3f9 !important;
     background: none !important;
 }
 
@@ -1019,7 +1019,7 @@ input.exchange-input:hover {
     font-size: 22px;
     text-align: center;
     margin: 10px 0 20px 0;
-    color: #37ffac;
+    color: #6bd3f9;
 }
 
 .detail .feature .title img {
@@ -1060,7 +1060,7 @@ input.exchange-input:hover {
 .detail .feature .title p {
     font-size: 12px;
     font-weight: 500;
-    color: #37ffac;
+    color: #6bd3f9;
     margin-bottom: 0;
     line-height: 16px;
 }
@@ -1088,7 +1088,7 @@ input.exchange-input:hover {
 }
 
 .latest-main {
-    border-top: 2px solid #37ffac;
+    border-top: 2px solid #6bd3f9;
     backdrop-filter: blur(6px);
 }
 
@@ -1207,7 +1207,7 @@ input.exchange-input:hover {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    background: #37ffac;
+    background: #6bd3f9;
 }
 
 .mowtit.big-title {
@@ -1303,7 +1303,7 @@ input.exchange-input:hover {
 
 .vertical-news .content span {
     font-size: 14px;
-    color: #37ffac;
+    color: #6bd3f9;
 }
 
 .vertical-news .item-news {
@@ -1424,7 +1424,7 @@ input.exchange-input:hover {
     width: min-content;
     margin: auto;
     text-transform: uppercase;
-    background: linear-gradient(219deg, #0099ff 19%, transparent 19%, transparent 20%, #37ffac 20%, #37ffac 39%, transparent 39%, transparent 40%, #0099ff 40%, #0099ff 59%, transparent 59%, transparent 60%, #37ffac 60%, #37ffac 79%, transparent 79%, transparent 80%, #0099ff 80%);
+    background: linear-gradient(219deg, #fff 19%, transparent 19%, transparent 20%, #6bd3f9 20%, #6bd3f9 39%, transparent 39%, transparent 40%, #fff 40%, #fff 59%, transparent 59%, transparent 60%, #6bd3f9 60%, #6bd3f9 79%, transparent 79%, transparent 80%, #fff 80%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -1450,7 +1450,7 @@ input.exchange-input:hover {
 }
 
 .bannerfix {
-    background: url("/img/banner.jpg") center bottom;
+    background: url("/img/bg-01.svg") center bottom;
     background-size: cover;
     height: 80vh;
     position: absolute;
@@ -1536,7 +1536,7 @@ input.exchange-input:hover {
 
 .list-resion img {
     width: 18px;
-    filter: invert(93%) sepia(15%) saturate(1914%) hue-rotate(81deg) brightness(100%) contrast(103%);
+    filter: invert(78%) sepia(7%) saturate(3219%) hue-rotate(163deg) brightness(97%) contrast(101%);
     margin-top: 6px;
 }
 
@@ -1550,5 +1550,40 @@ input.exchange-input:hover {
 
 .v-field__append-inner .v-icon--size-default {
     font-size: 25px !important;
-    color: #37ffac;
+    color: #6bd3f9;
+}
+
+.error-msg {
+    color: #ff2626;
+    font-size: 13px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.v-text-field .v-input__details {
+    display: none;
+}
+
+.v-card .v-card-title {
+    color: #6bd3f9;
+}
+
+.v-card--variant-elevated {
+    background: #2f3136 !important;
+}
+
+.v-card-actions .v-btn {
+    padding: 0 15px !important;
+}
+
+.v-alert--density-default {
+    padding: 5px 15px !important;
+}
+
+.success-msg {
+    font-size: 14px;
+    color: #0fd892;
+}
+.mobile-menu a{
+    color: #6bd3f9 !important;
 }

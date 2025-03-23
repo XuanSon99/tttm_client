@@ -36,7 +36,7 @@ export default defineNuxtConfig({
           content:
             "Hệ thống CashBack của TTTM. Hoàn phí tối thiểu 50% mọi giao dịch trên MEXC",
         },
-        { hid: "og:title", property: "og:title", content: "Chợ OTC Việt Nam" },
+        { hid: "og:title", property: "og:title", content: "Tải Tiền Trên Mạng" },
         {
           hid: "og:description",
           property: "og:description",
@@ -46,13 +46,13 @@ export default defineNuxtConfig({
         {
           hid: "og:image",
           property: "og:image",
-          content: "https://chootc.com/img/thumbnail.jpg",
+          content: "https://taitientrenmang.com/img/thumbnail.jpg",
         },
-        { hid: "og:url", property: "og:url", content: "https://chootc.com" },
+        { hid: "og:url", property: "og:url", content: "https://taitientrenmang.com" },
         {
           hid: "og:site_name",
           property: "og:site_name",
-          content: "Chợ OTC Việt Nam",
+          content: "Tải Tiền Trên Mạng",
         },
         { hid: "og:image:height", property: "og:image:height", content: "628" },
         { hid: "og:image:width", property: "og:image:width", content: "1200" },
@@ -62,33 +62,33 @@ export default defineNuxtConfig({
           content: "RVRV7yV3NVcrTJk9zPJLs3isxpN5erzbQk8dT7FDaDc",
         },
         { name: "robots", content: "index,follow,all" },
-        { name: "copyright", content: "chootcvn" },
+        { name: "copyright", content: "taitientrenmang" },
         { name: "distribution", content: "Global" },
         { name: "revisit-after", content: "1 days" },
-        { name: "GENERATOR", content: "http://chootc.com" },
-        { name: "author", content: "chootcvn" },
-        { name: "site_path", content: "http://chootc.com" },
+        { name: "GENERATOR", content: "http://taitientrenmang.com" },
+        { name: "author", content: "taitientrenmang" },
+        { name: "site_path", content: "http://taitientrenmang.com" },
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: "Chợ OTC Việt Nam" },
-        { name: "twitter:url", content: "https://chootc.com" },
+        { name: "twitter:title", content: "Tải Tiền Trên Mạng" },
+        { name: "twitter:url", content: "https://taitientrenmang.com" },
         {
           name: "twitter:description",
           content:
             "Hệ thống CashBack của TTTM. Hoàn phí tối thiểu 50% mọi giao dịch trên MEXC",
         },
-        { name: "twitter:site", content: "@chootcvn" },
-        { name: "twitter:creator", content: "@chootcvn" },
+        { name: "twitter:site", content: "@taitientrenmang" },
+        { name: "twitter:creator", content: "@taitientrenmang" },
       ],
       link: [
-        { rel: "icon", href: "https://chootc.com/img/logo.png" },
-        { rel: "shortcut icon", href: "https://chootc.com/img/logo.png" },
+        { rel: "icon", href: "https://taitientrenmang.com/img/logo.png" },
+        { rel: "shortcut icon", href: "https://taitientrenmang.com/img/logo.png" },
         {
           rel: "apple-touch-icon",
-          href: "https://chootc.com/img/logo.png",
+          href: "https://taitientrenmang.com/img/logo.png",
           sizes: "114x114",
         },
-        { rel: "canonical", href: "https://chootc.com" },
-        { rel: "alternate", href: "https://chootc.com" },
+        { rel: "canonical", href: "https://taitientrenmang.com" },
+        { rel: "alternate", href: "https://taitientrenmang.com" },
       ],
       script: [
         {
@@ -120,6 +120,6 @@ export default defineNuxtConfig({
     },
   },
   sitemap: {
-    siteUrl: "https://chootc.com",
+    siteUrl: "https://taitientrenmang.com",
   },
 });

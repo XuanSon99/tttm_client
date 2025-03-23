@@ -40,10 +40,6 @@
         display: none !important;
     }
 
-    header {
-        box-shadow: 0px 0px 50px #ffffff10;
-    }
-
     .menu {
         display: none !important;
     }
@@ -80,7 +76,8 @@
     .foot {
         grid-template-columns: 1fr;
     }
-    .banner{
+
+    .banner {
         height: 50vh;
         min-height: fit-content;
     }
@@ -281,6 +278,7 @@
     .foot-logo img {
         height: 113px;
     }
+
     .foot {
         grid-template-columns: 1fr !important;
     }
@@ -288,11 +286,22 @@
     .banner h1 {
         font-size: 70px;
     }
+
     .banner p {
         font-size: 26px;
     }
-    .logo-bot{
+
+    .logo-bot {
         justify-content: center
     }
-   
+
+    .list-resion {
+        font-size: 16px;
+    }
+    .resion .mowgrid {
+        grid-gap: 30px;
+    }
+    .margin-all {
+        margin: 60px 0;
+    }
 }

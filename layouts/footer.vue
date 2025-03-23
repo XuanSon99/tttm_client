@@ -5,7 +5,7 @@
         <div class="flex logo-bot">
         <nuxt-img
           format="webp"
-          src="/img/mexc.svg"
+          src="/img/logo.svg"
           alt=""
           loading="lazy"
           style="width: 100px"

@@ -111,7 +111,7 @@ const toDetail = (slug) => {
 const configBody = (date, body) => {
   const time = new Date(date).getTime()
   if (time < 1684400071000) {
-    return body.replaceAll('<img src=\"https://chootc.com', '<img src=\"https://api.chootc.com')
+    return body.replaceAll('<img src=\"https://taitientrenmang.com', '<img src=\"https://api.taitientrenmang.com')
   }
   return body
 }
@@ -135,15 +135,15 @@ useHead({
     { hid: 'og:description', property: 'og:description', content: info.value.meta_description },
     { name: 'keywords', content: keywords },
     { name: 'news_keywords', content: keywords },
-    { hid: 'og:image', property: 'og:image', content: `https://api.chootc.com/storage${info.value.image}` },
+    { hid: 'og:image', property: 'og:image', content: `https://api.taitientrenmang.com/storage${info.value.image}` },
     { name: 'twitter:title', content: info.value.title },
     { name: 'twitter:description', property: 'og:description', content: info.value.meta_description },
-    { name: 'twitter:image', content: `https://api.chootc.com/storage${info.value.image}` },
-    { name: 'twitter:url', content: `https://chootc.com/${info.value.slug}` },
+    { name: 'twitter:image', content: `https://api.taitientrenmang.com/storage${info.value.image}` },
+    { name: 'twitter:url', content: `https://taitientrenmang.com/${info.value.slug}` },
   ],
   link: [
-    { rel: 'canonical', href: `https://chootc.com/${info.value.slug}` },
-    { rel: 'alternate', href: `https://chootc.com/${info.value.slug}` }
+    { rel: 'canonical', href: `https://taitientrenmang.com/${info.value.slug}` },
+    { rel: 'alternate', href: `https://taitientrenmang.com/${info.value.slug}` }
   ],
 })
 
@@ -157,7 +157,7 @@ useJsonld([
           "@type": "ListItem",
           "position": 1,
           "name": "Trang chủ",
-          "item": "https://chootc.com"
+          "item": "https://taitientrenmang.com"
         }
       ],
       [
@@ -165,7 +165,7 @@ useJsonld([
           "@type": "ListItem",
           "position": 2,
           "name": info.value.cate_name,
-          "item": `https://chootc.com/danh-muc/${info.value.category}`
+          "item": `https://taitientrenmang.com/danh-muc/${info.value.category}`
         }
       ],
     ]
@@ -176,14 +176,14 @@ useJsonld([
     "mainEntityOfPage": {
       "@context": "http://schema.org",
       "@type": "WebPage",
-      "@id": `https://chootc.com/${info.value.slug}`
+      "@id": `https://taitientrenmang.com/${info.value.slug}`
     },
     "headline": info.value.title,
     "description": info.value.meta_description,
     "image": {
       "@context": "http://schema.org",
       "@type": "ImageObject",
-      "url": `https://api.chootc.com/storage${info.value.image}`,
+      "url": `https://api.taitientrenmang.com/storage${info.value.image}`,
     },
     "author": {
       "@context": "http://schema.org",
@@ -196,11 +196,11 @@ useJsonld([
     "publisher": {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "name": "Chợ OTC Việt Nam",
+      "name": "Tải Tiền Trên Mạng",
       "logo": {
         "@context": "http://schema.org",
         "@type": "ImageObject",
-        "url": "https://chootc.com/img/logo.png",
+        "url": "https://taitientrenmang.com/img/logo.png",
         "height": "60px",
         "width": "60px"
       }
@@ -221,8 +221,8 @@ useJsonld([
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "url": "https://chootc.com",
-    "logo": 'https://chootc.com/img/logo.png'
+    "url": "https://taitientrenmang.com",
+    "logo": 'https://taitientrenmang.com/img/logo.png'
   },
 ]);
 
