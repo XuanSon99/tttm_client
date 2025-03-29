@@ -79,8 +79,8 @@
 <script setup>
 import moment from "moment";
 
-const api_url = 'https://api.taitientrenmang.com'
-const { id } = useRoute().params
+const api_url = 'https://api.taitientrenmang.com/api'
+const { id } = useRoute().params``
 
 const { data: info } = await useFetch(`${api_url}/posts/${id}`)
 
