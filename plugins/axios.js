@@ -6,7 +6,7 @@ export default (context, inject) => {
                 "Authorization": "Bearer " + localStorage.getItem("token")
             },
         };
-        const baseurl = `https://hi.muabanusdt.xyz`
+        const baseurl = `https://api.taitientrenmang.com`
         const requestUrl = `${baseurl}/api/${url}`;
         switch (method) {
             case "post":
