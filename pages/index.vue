@@ -63,10 +63,12 @@
               </div>
               <div class="space mb-2">
                 <span>Điều kiện rút:</span>
-                <span>Hoàn phí > 20u</span>
+                <span class="d-flex align-center">Hoàn phí > 20
+                  <img class="img-usdt" src="/img/icon/usdt.png" alt="">
+                </span>
               </div>
               <v-text-field class="mt-5" append-inner-icon="mdi:mdi-arrow-right" variant="outlined"
-                label="Nhập UID để kiểm tra hoàn phí" density="compact" v-model="uid"
+                label="Nhập UID để kiểm tra hoàn phí" density="compact" v-model="uid" type="number"
                 @click:append-inner="checkUser"></v-text-field>
               <p class="error-msg mb-7">{{ error }}</p>
             </div>
@@ -154,25 +156,41 @@
           </div>
           <div class="space mb-2">
             <span>Tổng phí được hoàn:</span>
-            <span>{{ formatNumber(user.refund / 2) }} USDT</span>
+            <span class="d-flex align-center">{{ formatNumber(user.refund / 2) }}
+              <img class="img-usdt" src="/img/icon/usdt.png" alt="">
+            </span>
           </div>
           <div class="space mb-2">
-            <span>Phí đã rút:</span>
-            <span>{{ formatNumber(user.withdraw) }} USDT</span>
+            <span>Số tiền đã rút:</span>
+            <span class="d-flex align-center">{{ formatNumber(user.withdraw) }}
+              <img class="img-usdt" src="/img/icon/usdt.png" alt="">
+            </span>
           </div>
           <div class="space mb-2">
             <span>Số dư còn lại:</span>
-            <span>{{ formatNumber(balance) }} USDT</span>
+            <span class="d-flex align-center">{{ balance }}
+              <img class="img-usdt" src="/img/icon/usdt.png" alt="">
+            </span>
+          </div>
+          <div class="space mb-2" v-if="user.withdraw_wait">
+            <span>Đang chờ thanh toán:</span>
+            <span class="d-flex align-center">{{ formatNumber(user.withdraw_wait) }}
+              <img class="img-usdt" src="/img/icon/usdt.png" alt="">
+            </span>
           </div>
         </v-card-text>
 
         <v-divider></v-divider>
 
         <v-card-actions>
-          <v-text-field variant="outlined" label="Nhập số tiền muốn rút" density="compact" v-model="amount" class="mr-2"
-            v-if="tab == 2"></v-text-field>
-          <v-btn class="text-none" color="#4f545c" variant="flat" :disabled="amount < 20 || amount > balance"
-            v-if="tab == 2" @click="withdraw()">
+          <v-text-field variant="outlined" label="Nhập số tiền muốn rút" type="number" density="compact"
+            v-model="amount" class="mr-2" v-if="tab == 2">
+            <template v-slot:append-inner>
+              <div class="btn-max" @click="amount = balance">MAX</div>
+            </template>
+          </v-text-field>
+          <v-btn class="text-none btn-normal" variant="flat" :disabled="amount < 20 || amount > balance" v-if="tab == 2"
+            @click="withdraw()">
             Xác nhận
           </v-btn>
           <div v-if="tab == 3" class="success-msg">
@@ -180,8 +198,7 @@
             <span>Yêu cầu rút tiền thành công!</span>
           </div>
           <v-spacer v-if="tab != 2"></v-spacer>
-          <v-btn class="text-none" color="#4f545c" variant="flat" :disabled="balance < 20" v-if="tab == 1"
-            @click="tab = 2">
+          <v-btn class="text-none btn-normal" variant="flat" :disabled="balance < 20" v-if="tab == 1" @click="tab = 2">
             Rút tiền
           </v-btn>
           <v-btn class="text-none" variant="text" border @click="dialog = false; tab = 1">
@@ -285,7 +302,7 @@ export default {
           return
         }
         this.user = res.data[0]
-        this.balance = this.user.refund / 2 - this.user.withdraw
+        this.balance = this.formatNumber(this.user.refund / 2 - this.user.withdraw - this.user.withdraw_wait)
         this.dialog = true
       });
     },
@@ -296,11 +313,12 @@ export default {
       }
       this.$callAPI("post", "history", data, (res) => {
         this.tab = 3
+        this.checkUser()
       });
     },
     formatNumber(value) {
       if (Number.isInteger(value)) return value;
-      return value.toFixed(2);
+      return value.toFixed(0);
     },
     formatTime(date) {
       var value = new Date(date);

@@ -1551,6 +1551,7 @@ input.exchange-input:hover {
 .v-field__append-inner .v-icon--size-default {
     font-size: 25px !important;
     color: #6bd3f9;
+    opacity: 1 !important;
 }
 
 .error-msg {
@@ -1584,6 +1585,31 @@ input.exchange-input:hover {
     font-size: 14px;
     color: #0fd892;
 }
-.mobile-menu a{
+
+.mobile-menu a {
     color: #6bd3f9 !important;
+}
+
+.btn-normal {
+    /* background: linear-gradient(to right, #2982bb, #6bd3f9, #fff) !important; */
+    color: #000 !important;
+    background: #6bd3f9 !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+.btn-max{
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 4px;
+    color: #6bd3f9;
+}
+.img-usdt{
+    height: 16px !important;
+    margin-left: 7px;
 }

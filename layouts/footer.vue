@@ -3,56 +3,23 @@
     <div class="mowtainer">
       <div class="mowgrid foot align-center">
         <div class="flex logo-bot">
-        <nuxt-img
-          format="webp"
-          src="/img/logo.svg"
-          alt=""
-          loading="lazy"
-          style="width: 100px"
-        />
+          <nuxt-img format="webp" src="/img/logo.svg" alt="" loading="lazy" style="width: 100px" />
         </div>
         <div class="flex justify-center">
           <span>© 2025 taitientrenmang.com. All rights reserved</span>
         </div>
         <div class="flex justify-end">
-          <v-btn
-            icon
-            size="35"
-            variant="text"
-            href=""
-            target="_blank"
-            aria-label="Telegram"
-          >
+          <v-btn icon size="35" variant="text" href="https://t.me/taitientrenmang" target="_blank"
+            aria-label="Telegram">
             <v-icon size="22">fa-brands fa-telegram</v-icon>
           </v-btn>
-          <v-btn
-            icon
-            size="35"
-            variant="text"
-            href=""
-            target="_blank"
-            aria-label="Facebook"
-          >
-            <v-icon size="22">fa-brands fa-facebook</v-icon>
-          </v-btn>
-          <v-btn
-            icon
-            size="35"
-            variant="text"
-            href=""
-            target="_blank"
-            aria-label="Twitter"
-          >
+          <v-btn icon size="35" variant="text" href="https://x.com/iamnxa" target="_blank" aria-label="Twitter">
             <v-icon size="22">fa-brands fa-twitter</v-icon>
           </v-btn>
-          <v-btn
-            icon
-            size="35"
-            variant="text"
-            href=""
-            target="_blank"
-            aria-label="Tiktok"
-          >
+          <v-btn icon size="35" variant="text" href="" target="_blank" aria-label="Facebook">
+            <v-icon size="22">fa-brands fa-facebook</v-icon>
+          </v-btn>
+          <v-btn icon size="35" variant="text" href="" target="_blank" aria-label="Tiktok">
             <v-icon size="22">fa-brands fa-tiktok</v-icon>
           </v-btn>
         </div>
@@ -165,11 +132,9 @@ footer p:hover {
   height: 100%;
   background-image: url("/img/home/footer.svg");
   background-repeat: no-repeat;
-  mask-image: radial-gradient(
-    closest-side,
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  mask-image: radial-gradient(closest-side,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0) 100%);
   z-index: -1;
   background-size: cover;
 }
