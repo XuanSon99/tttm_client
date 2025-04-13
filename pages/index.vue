@@ -5,7 +5,7 @@
       <div class="mowtainer relative">
         <div class="content layer" data-speed="2">
           <div class="d-flex justify-center">
-            <h1 class="text-gradient">TBACK</h1>
+            <h1 class="text-special text-gradient">TBACK</h1>
           </div>
           <p>Hệ thống CashBack của TTTM</p>
           <p class="d-flex justify-center slogan">
@@ -23,7 +23,6 @@
     </section>
     <section class="relative mt-16">
       <div class="mowtainer">
-        <div>
           <div class="mowgrid grid-bot mt-8">
             <div class="vertical-news">
               <div class="space mb-6">
@@ -73,7 +72,6 @@
               <p class="error-msg mb-7">{{ error }}</p>
             </div>
           </div>
-        </div>
       </div>
       <!-- <div class="planet"></div>
       <div class="bgr-planet"></div> -->
@@ -168,7 +166,7 @@
           </div>
           <div class="space mb-2">
             <span>Số dư còn lại:</span>
-            <span class="d-flex align-center">{{ balance }}
+            <span class="d-flex align-center">{{ Math.abs(balance) }}
               <img class="img-usdt" src="/img/icon/usdt.png" alt="">
             </span>
           </div>

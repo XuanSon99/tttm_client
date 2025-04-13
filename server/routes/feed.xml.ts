@@ -3,26 +3,26 @@ import axios from 'axios'
 
 export default defineEventHandler(async (event) => {
     const feed = new RSS({
-        title: 'Chợ OTC Việt Nam',
-        site_url: 'https://chootc.com',
-        feed_url: `https://chootc.com/feed.xml`,
-        image_url: 'https://chootc.com/img/logo.png',
-        copyright: '@chootcvn',
+        title: 'Tải tiền trên mạng',
+        site_url: 'https://taitientrenmang.com',
+        feed_url: `https://taitientrenmang.com/feed.xml`,
+        image_url: 'https://taitientrenmang.com/img/logo.png',
+        copyright: '@taitientrenmang',
         language: 'vi-vn',
         ttl: 15,
         categories: ['crypto', 'otc', 'usdt', 'btc', 'eth', 'bitcoin', 'tiền điện tử','chứng khoán', 'giá vàng', 'tỷ giá', 'ngoại tệ'],
     })
 
-    const list = (await axios.get(`https://api.chootc.com/api/posts`)).data.data;
+    const list = (await axios.get(`https://api.taitientrenmang.com/api/posts`)).data.data;
 
     for (const item of list) {
         feed.item({
             title: item.title,
-            url: `https://chootc.com/${item.slug}`,
+            url: `https://taitientrenmang.com/${item.slug}`,
             date: item.created_at,
             description: item.meta_description,
-            author: 'chootcvn',
-            guid: `https://chootc.com/${item.slug}`,
+            author: 'taitientrenmang',
+            guid: `https://taitientrenmang.com/${item.slug}`,
         }) 
     }
 

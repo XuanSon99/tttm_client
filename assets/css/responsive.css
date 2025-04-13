@@ -304,4 +304,7 @@
     .margin-all {
         margin: 60px 0;
     }
+    .text-right{
+        text-align: left !important;
+    }
 }

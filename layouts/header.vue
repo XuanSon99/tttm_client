@@ -14,11 +14,14 @@
                 <router-link to="/" class="menu-item" aria-label="Trang chủ">Trang chủ</router-link>
               </div>
               <div class="main-menu">
-                <router-link to="/tin-tuc" class="menu-item" aria-label="Trang chủ">Tin tức</router-link>
+                <router-link to="/tin-tuc" class="menu-item" aria-label="Tin tức">Tin tức</router-link>
               </div>
               <div class="main-menu">
-                <a class="menu-item" href="https://t.me/iamnxa" target="_blank" aria-label="Liên hệ">Hỗ trợ</a>
+                <router-link to="/gioi-thieu" class="menu-item" aria-label="Giới thiệu">Giới thiệu</router-link>
               </div>
+              <!-- <div class="main-menu">
+                <a class="menu-item" href="https://t.me/iamnxa" target="_blank" aria-label="Liên hệ">Hỗ trợ</a>
+              </div> -->
             </div>
           </div>
           <div class="btn-all shadow outline" aria-label="Tài khoản" @click="scrollTo('mexc')">
@@ -82,6 +85,10 @@ export default {
         {
           slug: "/tin-tuc",
           name: "Tin tức",
+        },
+        {
+          slug: "/gioi-thieu",
+          name: "Giới thiệu",
         },
         {
           href: "https://t.me/iamnxa",

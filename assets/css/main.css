@@ -1416,7 +1416,7 @@ input.exchange-input:hover {
     padding-top: 12px;
 }
 
-.banner h1 {
+.text-special {
     text-align: center;
     font-size: 86px;
     width: -webkit-min-content;
@@ -1535,7 +1535,7 @@ input.exchange-input:hover {
 }
 
 .list-resion img {
-    width: 18px;
+    width: 18px !important;
     filter: invert(78%) sepia(7%) saturate(3219%) hue-rotate(163deg) brightness(97%) contrast(101%);
     margin-top: 6px;
 }
@@ -1603,13 +1603,47 @@ input[type=number]::-webkit-outer-spin-button {
     appearance: none;
     margin: 0;
 }
-.btn-max{
+
+.btn-max {
     cursor: pointer;
     font-size: 12px;
     margin-top: 4px;
     color: #6bd3f9;
 }
-.img-usdt{
+
+.img-usdt {
     height: 16px !important;
     margin-left: 7px;
+}
+
+.about img {
+    width: 100%;
+}
+
+.about p {
+    margin-bottom: 10px;
+    /* text-align: justify; */
+}
+
+.grid-about {
+    grid-template-columns: 3fr 4fr;
+}
+
+.about-title {
+    color: #6bd3f9;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.text-right{
+    text-align: right
+}
+.text-center{
+    text-align: center
+}
+.about .list-resion{
+    font-size: 16px;
+}
+.about .list-resion img{
+    width: 14px !important;
 }

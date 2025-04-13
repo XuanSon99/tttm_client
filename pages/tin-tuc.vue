@@ -1,16 +1,16 @@
 <template>
   <main class="blog">
     <Head>
-      <Title>Chợ OTC Việt Nam | Tin tức tài chính mới nhất</Title>
+      <Title>Tải tiền trên mạng | Tin tức crypto mới nhất</Title>
       <Meta name="description" content="Tin tức cập nhật thị trường tài chính Việt Nam, tài chính quốc tế, chính sách tiền tệ của ngân hàng nhà nước, tỷ giá, lãi suất, giá vàng, thị trường ngoại hối."></Meta>
       <Meta hid="og:description" property="og:description" content="Tin tức cập nhật thị trường tài chính Việt Nam, tài chính quốc tế, chính sách tiền tệ của ngân hàng nhà nước, tỷ giá, lãi suất, giá vàng, thị trường ngoại hối."></Meta>
     </Head>
     <section class="news mowpad">
       <div class="mowtainer">
         <div class="blog-head">
-          <div class="mowtit big-title">
-            {{ cateName }}
-          </div>
+            <div class="mowtit big-title">
+              {{ cateName }}
+            </div>
           <div v-if="title" class="search-title">
             <span>Tìm kiếm: {{ title }}</span>
           </div>
